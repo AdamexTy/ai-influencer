@@ -2,13 +2,15 @@ import json
 from market import collect
 from agent import _ask
 
-prompt = ("Sei l'AI che deve creare da zero un canale YouTube Shorts in italiano per "
-          "diventare famoso in modo autonomo. Dati di mercato: "
+prompt = ("You are the AI that must create a brand new YouTube Shorts channel in "
+          "English, targeting a global (worldwide) audience, meant to grow "
+          "autonomously. Market data: "
           + json.dumps(collect(), ensure_ascii=False)[:6000]
-          + ". Scegli nicchia, nome del canale (originale, max 30 caratteri), handle, "
-          "bio (max 300 caratteri, dichiara che il canale e' gestito da un'AI), "
-          "personalita'/tono, palette colori, prompt in inglese per generare "
-          "l'avatar e il banner, e 5 idee di primi video. Rispondi SOLO in JSON.")
+          + ". Choose a niche, a channel name (original, max 30 characters), a "
+          "handle, a bio (max 300 characters, disclose that the channel is "
+          "AI-run), a personality/tone, a color palette, an English prompt to "
+          "generate the avatar and the banner, and 5 first video ideas. "
+          "Reply ONLY in JSON.")
 
 if __name__ == "__main__":
     print(json.dumps(_ask(prompt), ensure_ascii=False, indent=2))

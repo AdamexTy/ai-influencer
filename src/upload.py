@@ -23,7 +23,7 @@ def upload(path, plan, privacy="public"):
         "\n\nCanale gestito da un'intelligenza artificiale. Clip: Pexels."
     body = {
         "snippet": {"title": plan["title"][:100], "description": desc,
-                    "tags": tags, "categoryId": "22", "defaultLanguage": "it"},
+                    "tags": tags, "categoryId": "22", "defaultLanguage": "en"},
         "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False,
                    "containsSyntheticMedia": True}}
     media = MediaFileUpload(path, mimetype="video/mp4", resumable=True)

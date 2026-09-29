@@ -2,7 +2,7 @@ import os
 import datetime
 import requests
 
-def youtube_trending(region="IT", n=25):
+def youtube_trending(region="US", n=25):
     r = requests.get(
         "https://www.googleapis.com/youtube/v3/videos",
         params={"part": "snippet,statistics", "chart": "mostPopular",
@@ -26,7 +26,7 @@ def hacker_news(n=15):
         titles.append(item.get("title", ""))
     return titles
 
-def wikipedia_top(lang="it", n=25):
+def wikipedia_top(lang="en", n=25):
     d = datetime.date.today() - datetime.timedelta(days=2)
     url = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/top/"
            "%s.wikipedia/all-access/%s" % (lang, d.strftime("%Y/%m/%d")))
