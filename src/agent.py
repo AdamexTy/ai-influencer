@@ -3,7 +3,7 @@ import json
 from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-MODEL = "gemini-2.5-flash"   # verifica il nome del modello disponibile
+MODEL = "gemini-3.8-flash"   # verifica il nome del modello disponibile
 
 RULES = (
     "Sei l'agente autonomo che gestisce un canale YouTube Shorts in italiano. "
