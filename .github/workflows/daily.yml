@@ -27,7 +27,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Esegui agente
-        working-directory: src
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -35,7 +34,7 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python main.py
+        run: python src/main.py
 
       - name: Salva la memoria
         if: always()
