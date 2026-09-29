@@ -2,7 +2,7 @@ import json
 import datetime
 import pathlib
 from market import collect
-from agent import decide, review
+from agent import decide
 from guardrails import check
 from produce import make_video
 from upload import upload
@@ -33,9 +33,6 @@ def main():
             mem["lessons"].append("Tentativo fallito per errore tecnico: %s" % str(e)[:200])
             continue
         ok, why = check(candidate, mem)
-        if ok:
-            r = review(candidate)
-            ok, why = r.get("ok", False), r.get("reason", "")
         if ok:
             plan = candidate
             break

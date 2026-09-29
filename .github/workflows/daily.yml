@@ -1,8 +1,8 @@
 name: ai-influencer
 on:
   schedule:
-    - cron: "0 7 * * *"     # ogni giorno alle 07:00 UTC
-    - cron: "0 17 * * *"    # ogni giorno alle 17:00 UTC
+    - cron: "0 12 * * *"    # un run al giorno, alle 12:00 UTC (14:00 in Italia)
+    # - cron: "0 17 * * *"  # secondo run disattivato per risparmiare la quota gratuita di Gemini
   workflow_dispatch:         # permette l'avvio manuale
 
 permissions:

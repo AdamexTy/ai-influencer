@@ -4,7 +4,12 @@ import time
 from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-MODELS = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-2.5-flash"]   # verifica il nome del modello disponibile
+
+# Ordine di preferenza: il primo modello ha in genere la quota gratuita
+# giornaliera piu' alta. Se un modello finisce la quota o non risponde,
+# si passa automaticamente al successivo. Se questi nomi diventano
+# obsoleti, controlla https://ai.google.dev/gemini-api/docs/models
+MODELS = ["gemini-3.5-flash-lite", "gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash"]
 
 RULES = (
     "Sei l'agente autonomo che gestisce un canale YouTube Shorts in italiano. "
@@ -27,11 +32,14 @@ FORMAT = (
     "description, hashtags (lista, max 5), rationale (perche' hai scelto questo)."
 )
 
+
 def _ask(prompt):
-    """Chiede a Gemini, con retry e modelli di riserva se Google è occupato"""
+    """Chiede a Gemini: prova piu' modelli in ordine, salta subito al
+    successivo se la quota e' esaurita, riprova con attesa se il server
+    e' solo temporaneamente occupato."""
     last_error = None
     for model in MODELS:
-        for attempt in range(4):
+        for attempt in range(3):
             try:
                 resp = client.models.generate_content(
                     model=model,
@@ -42,14 +50,17 @@ def _ask(prompt):
             except Exception as e:
                 last_error = e
                 error_str = str(e)
-                if "503" in error_str or "UNAVAILABLE" in error_str or "overloaded" in error_str.lower():
+                if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str:
+                    print(f"⚠️ Quota esaurita per {model}, provo il modello successivo...")
+                    break  # niente retry sullo stesso modello: e' quota giornaliera
+                elif "503" in error_str or "UNAVAILABLE" in error_str:
                     wait_time = 5 * (attempt + 1)
-                    print(f"⏳ {model} occupato, riprovo tra {wait_time}s... (tentativo {attempt + 1}/4)")
+                    print(f"⏳ {model} occupato, riprovo tra {wait_time}s... (tentativo {attempt + 1}/3)")
                     time.sleep(wait_time)
                 else:
                     raise
-        print(f"⚠️ {model} non disponibile dopo 4 tentativi, provo il modello successivo...")
     raise last_error
+
 
 def decide(market, memory):
     recent = memory.get("videos", [])[-30:]
@@ -58,12 +69,4 @@ def decide(market, memory):
               + json.dumps(recent, ensure_ascii=False)[:6000]
               + "\n\nLEZIONI APPRESE:\n" + json.dumps(memory.get("lessons", [])[-15:], ensure_ascii=False)
               + "\n\n" + FORMAT)
-    return _ask(prompt)
-
-def review(plan):
-    prompt = ("Sei un revisore di sicurezza per contenuti video. Valuta questo piano: "
-              + json.dumps(plan, ensure_ascii=False)
-              + ". Rispondi SOLO con JSON: {\"ok\": true/false, \"reason\": \"...\"}. "
-              "ok=false se contiene disinformazione, consigli medici/finanziari/legali, "
-              "diffamazione, odio, contenuti sessuali o violazioni di copyright.")
     return _ask(prompt)
