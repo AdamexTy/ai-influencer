@@ -1,9 +1,10 @@
 import os
 import json
+import time
 from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-MODEL = "gemini-3.8-flash"   # verifica il nome del modello disponibile
+MODEL = "gemini-2.0-flash"   # verifica il nome del modello disponibile
 
 RULES = (
     "Sei l'agente autonomo che gestisce un canale YouTube Shorts in italiano. "
@@ -27,10 +28,29 @@ FORMAT = (
 )
 
 def _ask(prompt):
-    resp = client.models.generate_content(
-        model=MODEL, contents=prompt,
-        config={"response_mime_type": "application/json"})
-    return json.loads(resp.text)
+    """Chiede a Gemini, con retry automatico se Google è occupato"""
+    max_attempts = 5
+    
+    for attempt in range(max_attempts):
+        try:
+            resp = client.models.generate_content(
+                model=MODEL, 
+                contents=prompt,
+                config={"response_mime_type": "application/json"}
+            )
+            return json.loads(resp.text)
+        
+        except Exception as e:
+            error_str = str(e)
+            
+            # Se è un errore 503 (Google occupato) e non è l'ultimo tentativo, riprova
+            if "503" in error_str and attempt < max_attempts - 1:
+                wait_time = 2 ** attempt + 2  # 3, 4, 6, 10, 18 secondi
+                print(f"⏳ Google occupato, riprovo tra {wait_time}s... (tentativo {attempt + 1}/{max_attempts})")
+                time.sleep(wait_time)
+            else:
+                # Se non è 503 o è l'ultimo tentativo, fallisci
+                raise
 
 def decide(market, memory):
     recent = memory.get("videos", [])[-30:]
