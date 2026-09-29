@@ -1,0 +1,7 @@
+requests
+edge-tts
+google-genai
+google-api-python-client
+google-auth
+google-auth-oauthlib
+faster-whisper

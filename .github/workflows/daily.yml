@@ -1,0 +1,46 @@
+name: ai-influencer
+on:
+  schedule:
+    - cron: "0 7 * * *"     # ogni giorno alle 07:00 UTC
+    - cron: "0 17 * * *"    # ogni giorno alle 17:00 UTC
+  workflow_dispatch:         # permette l'avvio manuale
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Installa FFmpeg e font
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
+
+      - name: Installa dipendenze Python
+        run: pip install -r requirements.txt
+
+      - name: Esegui agente
+        working-directory: src
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python main.py
+
+      - name: Salva la memoria
+        if: always()
+        run: |
+          git config user.name "ai-bot"
+          git config user.email "ai-bot@users.noreply.github.com"
+          git add memory
+          git diff --staged --quiet || (git commit -m "aggiorna memoria" && git push)
