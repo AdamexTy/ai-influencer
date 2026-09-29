@@ -4,7 +4,7 @@ import time
 from google import genai
 
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-MODEL = "gemini-3.8-flash"   # verifica il nome del modello disponibile
+MODELS = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-2.5-flash"]   # verifica il nome del modello disponibile
 
 RULES = (
     "Sei l'agente autonomo che gestisce un canale YouTube Shorts in italiano. "
@@ -28,29 +28,28 @@ FORMAT = (
 )
 
 def _ask(prompt):
-    """Chiede a Gemini, con retry automatico se Google è occupato"""
-    max_attempts = 5
-    
-    for attempt in range(max_attempts):
-        try:
-            resp = client.models.generate_content(
-                model=MODEL, 
-                contents=prompt,
-                config={"response_mime_type": "application/json"}
-            )
-            return json.loads(resp.text)
-        
-        except Exception as e:
-            error_str = str(e)
-            
-            # Se è un errore 503 (Google occupato) e non è l'ultimo tentativo, riprova
-            if "503" in error_str and attempt < max_attempts - 1:
-                wait_time = 2 ** attempt + 2  # 3, 4, 6, 10, 18 secondi
-                print(f"⏳ Google occupato, riprovo tra {wait_time}s... (tentativo {attempt + 1}/{max_attempts})")
-                time.sleep(wait_time)
-            else:
-                # Se non è 503 o è l'ultimo tentativo, fallisci
-                raise
+    """Chiede a Gemini, con retry e modelli di riserva se Google è occupato"""
+    last_error = None
+    for model in MODELS:
+        for attempt in range(4):
+            try:
+                resp = client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                    config={"response_mime_type": "application/json"}
+                )
+                return json.loads(resp.text)
+            except Exception as e:
+                last_error = e
+                error_str = str(e)
+                if "503" in error_str or "UNAVAILABLE" in error_str or "overloaded" in error_str.lower():
+                    wait_time = 5 * (attempt + 1)
+                    print(f"⏳ {model} occupato, riprovo tra {wait_time}s... (tentativo {attempt + 1}/4)")
+                    time.sleep(wait_time)
+                else:
+                    raise
+        print(f"⚠️ {model} non disponibile dopo 4 tentativi, provo il modello successivo...")
+    raise last_error
 
 def decide(market, memory):
     recent = memory.get("videos", [])[-30:]

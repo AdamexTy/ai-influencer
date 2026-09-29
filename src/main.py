@@ -26,7 +26,12 @@ def main():
 
     plan = None
     for attempt in range(3):              # fino a 3 tentativi se il piano viene scartato
-        candidate = decide(market, mem)
+        try:
+            candidate = decide(market, mem)
+        except Exception as e:
+            print("Errore nel contattare Gemini:", e)
+            mem["lessons"].append("Tentativo fallito per errore tecnico: %s" % str(e)[:200])
+            continue
         ok, why = check(candidate, mem)
         if ok:
             r = review(candidate)
