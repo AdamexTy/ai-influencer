@@ -10,6 +10,18 @@
     "subscribers": 0,
     "total_views": 0
   },
-  "videos": [],
+  "videos": [
+    {
+      "id": "0pSZfukW9xk",
+      "date": "2026-09-30",
+      "niche": "Curiosità e Scienza",
+      "topic": "La fisica dietro le pietre della fame nei fiumi europei",
+      "title": "Cosa nascondono i fiumi quando si prosciugano?",
+      "rationale": "Essendo il primo video del canale (memoria vuota), scelgo una nicchia sempreverde e ad alto tasso di retention (Curiosità e Scienza) sfruttando un argomento virale presente nelle tendenze di Wikipedia (Hunger stone). Lo stile è rapido, con gancio immediato e durata di circa 35 secondi.",
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    }
+  ],
   "lessons": []
 }
