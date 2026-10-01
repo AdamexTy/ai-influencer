@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 0,
-    "total_views": 0
+    "total_views": 103
   },
   "videos": [
     {
@@ -18,6 +18,17 @@
       "topic": "La fisica dietro le pietre della fame nei fiumi europei",
       "title": "Cosa nascondono i fiumi quando si prosciugano?",
       "rationale": "Essendo il primo video del canale (memoria vuota), scelgo una nicchia sempreverde e ad alto tasso di retention (Curiosità e Scienza) sfruttando un argomento virale presente nelle tendenze di Wikipedia (Hunger stone). Lo stile è rapido, con gancio immediato e durata di circa 35 secondi.",
+      "views": 519,
+      "likes": 4,
+      "comments": 0
+    },
+    {
+      "id": "P0BHp_mdggg",
+      "date": "2026-10-01",
+      "niche": "Curiosità e Scienza",
+      "topic": "L'ariete idraulico, la pompa che sfida la gravità senza elettricità",
+      "title": "La pompa che funziona senza elettricità!",
+      "rationale": "Ho scelto di rimanere nella nicchia 'Curiosità e Scienza' (coerente con il primo video) sfruttando un trend di Wikipedia ('Hydraulic ram'). L'argomento è visivo, educativo e genera curiosità immediata con un gancio forte nei primi 2 secondi.",
       "views": 0,
       "likes": 0,
       "comments": 0
