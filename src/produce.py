@@ -7,7 +7,9 @@ import edge_tts
 from faster_whisper import WhisperModel
 
 WORK = "work"
-VOICE = "en-US-AriaNeural"   # alternative: en-US-GuyNeural, en-GB-SoniaNeural, en-AU-NatashaNeural
+VOICE = "en-US-JennyNeural"      # femminile, tono caldo, molto usata e naturale
+# VOICE = "en-GB-SoniaNeural"    # britannica, molto chiara
+# VOICE = "en-US-GuyNeural"      # maschile
 W, H = 720, 1280
 
 def sh(cmd):
@@ -46,8 +48,8 @@ def fetch_clips(keywords, need):
     return paths
 
 def make_srt(audio, srt):
-    model = WhisperModel("tiny", device="cpu", compute_type="int8")
-    segs, _ = model.transcribe(audio, language="en")
+    model = WhisperModel("base", device="cpu", compute_type="int8")
+    segs, _ = model.transcribe(audio, language="en", beam_size=5, vad_filter=True)
     def ts(t):
         h, rem = divmod(t, 3600)
         m, s = divmod(rem, 60)
