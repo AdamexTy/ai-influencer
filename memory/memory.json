@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 0,
-    "total_views": 103
+    "total_views": 680
   },
   "videos": [
     {
@@ -18,8 +18,8 @@
       "topic": "La fisica dietro le pietre della fame nei fiumi europei",
       "title": "Cosa nascondono i fiumi quando si prosciugano?",
       "rationale": "Essendo il primo video del canale (memoria vuota), scelgo una nicchia sempreverde e ad alto tasso di retention (Curiosità e Scienza) sfruttando un argomento virale presente nelle tendenze di Wikipedia (Hunger stone). Lo stile è rapido, con gancio immediato e durata di circa 35 secondi.",
-      "views": 611,
-      "likes": 4,
+      "views": 802,
+      "likes": 7,
       "comments": 0
     },
     {
@@ -29,8 +29,8 @@
       "topic": "L'ariete idraulico, la pompa che sfida la gravità senza elettricità",
       "title": "La pompa che funziona senza elettricità!",
       "rationale": "Ho scelto di rimanere nella nicchia 'Curiosità e Scienza' (coerente con il primo video) sfruttando un trend di Wikipedia ('Hydraulic ram'). L'argomento è visivo, educativo e genera curiosità immediata con un gancio forte nei primi 2 secondi.",
-      "views": 1,
-      "likes": 0,
+      "views": 130,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -40,6 +40,17 @@
       "topic": "Zone di carenza di ossigeno negli oceani e prime forme di vita",
       "title": "Gli abissi marini che creano la vita!",
       "rationale": "Sfruttando la regola del 70% insisto sulla nicchia 'Curiosità e Scienza' che ha già visto i primi esperimenti, basandomi sui dati attuali di Hacker News ('Oxygen-deprived underwater zones may not be dead zones'). Il gancio iniziale è forte e stimola la curiosità, la durata è inferiore a 45 secondi e il linguaggio è accessibile.",
+      "views": 4,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "Paw5_lPCqPA",
+      "date": "2026-10-02",
+      "niche": "Curiosità e Scienza",
+      "topic": "I cubi di uranio della Germania nazista e la fisica nucleare",
+      "title": "Perché Hitler non ha mai avuto la bomba atomica!",
+      "rationale": "Sfruttando la regola del 70%, insisto sulla nicchia 'Curiosità e Scienza' che ha già generato interesse nei video precedenti. Per l'argomento, sfrutto il trend verificato da Hacker News ('Nazi Germany had no hope of making an atomic bomb, uranium cubes reveal'), garantendo un contenuto vero, storico e scientifico. Il gancio iniziale è forte nei primi 2 secondi, la durata dello script rientra nei 35-40 secondi (circa 100 parole) ed è privo di giudizi politici o di parte.",
       "views": 0,
       "likes": 0,
       "comments": 0
