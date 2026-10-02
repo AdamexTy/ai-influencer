@@ -67,7 +67,7 @@ def make_video(plan):
     need = max(3, math.ceil(dur / seg))
     clips = fetch_clips(plan["keywords"], need)
     if not clips:
-        raise RuntimeError("Nessuna clip trovata")
+        raise RuntimeError("No stock clips found")
     parts = []
     for i in range(need):
         src = clips[i % len(clips)]

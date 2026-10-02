@@ -25,21 +25,21 @@ def main():
     market = collect()
 
     plan = None
-    for attempt in range(3):              # fino a 3 tentativi se il piano viene scartato
+    for attempt in range(3):              # up to 3 tries if the plan gets rejected
         try:
             candidate = decide(market, mem)
         except Exception as e:
-            print("Errore nel contattare Gemini:", e)
-            mem["lessons"].append("Tentativo fallito per errore tecnico: %s" % str(e)[:200])
+            print("Error contacting Gemini:", e)
+            mem["lessons"].append("Attempt failed with a technical error: %s" % str(e)[:200])
             continue
         ok, why = check(candidate, mem)
         if ok:
             plan = candidate
             break
-        mem["lessons"].append("Piano scartato (%s): %s" % (candidate.get("topic"), why))
+        mem["lessons"].append("Plan rejected (%s): %s" % (candidate.get("topic"), why))
 
     if plan is None:
-        print("Nessun piano valido oggi.")
+        print("No valid plan today.")
         save(mem)
         return
 
@@ -50,7 +50,7 @@ def main():
         "niche": plan["niche"], "topic": plan["topic"], "title": plan["title"],
         "rationale": plan.get("rationale", ""), "views": 0, "likes": 0, "comments": 0})
     save(mem)
-    print("Pubblicato:", "https://youtube.com/shorts/" + vid)
+    print("Published:", "https://youtube.com/shorts/" + vid)
 
 if __name__ == "__main__":
     main()

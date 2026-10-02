@@ -1,17 +1,18 @@
-BLOCKED = ["vaccin", "cura per", "diagnosi", "investi", "criptovalut", "scommess",
-           "elezioni", "partito", "porn", "suicid", "armi", "droga", "complott"]
+BLOCKED = ["vaccin", "cure for", "diagnos", "invest in", "cryptocurrenc", "gambl",
+           "election", "political party", "porn", "suicid", "weapon", "drug",
+           "conspiracy"]
 
 def check(plan, mem):
     text = (plan.get("title", "") + " " + plan.get("script", "")).lower()
     for w in BLOCKED:
         if w in text:
-            return False, "parola vietata: " + w
+            return False, "blocked word: " + w
     words = len(plan.get("script", "").split())
     if words < 50 or words > 160:
-        return False, "lunghezza script non valida (%d parole)" % words
+        return False, "invalid script length (%d words)" % words
     if len(plan.get("keywords", [])) < 3:
-        return False, "parole chiave insufficienti"
+        return False, "not enough keywords"
     old = [v["title"].lower() for v in mem.get("videos", [])]
     if plan.get("title", "").lower() in old:
-        return False, "titolo duplicato"
+        return False, "duplicate title"
     return True, ""

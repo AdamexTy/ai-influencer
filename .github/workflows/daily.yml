@@ -1,9 +1,9 @@
 name: ai-influencer
 on:
   schedule:
-    - cron: "0 12 * * *"    # un run al giorno, alle 12:00 UTC (14:00 in Italia)
-    # - cron: "0 17 * * *"  # secondo run disattivato per risparmiare la quota gratuita di Gemini
-  workflow_dispatch:         # permette l'avvio manuale
+    - cron: "0 12 * * *"    # one run per day, at 12:00 UTC
+    # - cron: "0 17 * * *"  # second run disabled by default to save Gemini free-tier quota
+  workflow_dispatch:         # allows manual runs from the Actions tab
 
 permissions:
   contents: write
@@ -20,13 +20,13 @@ jobs:
           python-version: "3.11"
           cache: pip
 
-      - name: Installa FFmpeg e font
+      - name: Install FFmpeg and fonts
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
 
-      - name: Installa dipendenze Python
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Esegui agente
+      - name: Run the agent
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
@@ -36,11 +36,11 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python src/main.py
 
-      - name: Salva la memoria
+      - name: Save memory back to the repo
         if: always()
         run: |
           git config user.name "ai-bot"
           git config user.email "ai-bot@users.noreply.github.com"
           mkdir -p memory
           git add memory
-          git diff --staged --quiet || (git commit -m "aggiorna memoria" && git push)
+          git diff --staged --quiet || (git commit -m "update memory" && git push)
