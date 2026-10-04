@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 0,
-    "total_views": 1749
+    "total_views": 1854
   },
   "videos": [
     {
@@ -18,8 +18,8 @@
       "topic": "La fisica dietro le pietre della fame nei fiumi europei",
       "title": "Cosa nascondono i fiumi quando si prosciugano?",
       "rationale": "Essendo il primo video del canale (memoria vuota), scelgo una nicchia sempreverde e ad alto tasso di retention (Curiosità e Scienza) sfruttando un argomento virale presente nelle tendenze di Wikipedia (Hunger stone). Lo stile è rapido, con gancio immediato e durata di circa 35 secondi.",
-      "views": 874,
-      "likes": 7,
+      "views": 875,
+      "likes": 8,
       "comments": 0
     },
     {
@@ -29,8 +29,8 @@
       "topic": "L'ariete idraulico, la pompa che sfida la gravità senza elettricità",
       "title": "La pompa che funziona senza elettricità!",
       "rationale": "Ho scelto di rimanere nella nicchia 'Curiosità e Scienza' (coerente con il primo video) sfruttando un trend di Wikipedia ('Hydraulic ram'). L'argomento è visivo, educativo e genera curiosità immediata con un gancio forte nei primi 2 secondi.",
-      "views": 217,
-      "likes": 0,
+      "views": 255,
+      "likes": 2,
       "comments": 0
     },
     {
@@ -40,8 +40,8 @@
       "topic": "Zone di carenza di ossigeno negli oceani e prime forme di vita",
       "title": "Gli abissi marini che creano la vita!",
       "rationale": "Sfruttando la regola del 70% insisto sulla nicchia 'Curiosità e Scienza' che ha già visto i primi esperimenti, basandomi sui dati attuali di Hacker News ('Oxygen-deprived underwater zones may not be dead zones'). Il gancio iniziale è forte e stimola la curiosità, la durata è inferiore a 45 secondi e il linguaggio è accessibile.",
-      "views": 9,
-      "likes": 1,
+      "views": 14,
+      "likes": 2,
       "comments": 0
     },
     {
@@ -51,8 +51,8 @@
       "topic": "I cubi di uranio della Germania nazista e la fisica nucleare",
       "title": "Perché Hitler non ha mai avuto la bomba atomica!",
       "rationale": "Sfruttando la regola del 70%, insisto sulla nicchia 'Curiosità e Scienza' che ha già generato interesse nei video precedenti. Per l'argomento, sfrutto il trend verificato da Hacker News ('Nazi Germany had no hope of making an atomic bomb, uranium cubes reveal'), garantendo un contenuto vero, storico e scientifico. Il gancio iniziale è forte nei primi 2 secondi, la durata dello script rientra nei 35-40 secondi (circa 100 parole) ed è privo di giudizi politici o di parte.",
-      "views": 380,
-      "likes": 0,
+      "views": 377,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -62,8 +62,8 @@
       "topic": "The telescope capturing a 12-year sequence of a star and four orbiting planets",
       "title": "We Finally Captured 12 Years of Alien Planets Moving!",
       "rationale": "Following the 70% rule, I am sticking with the 'Curiosità e Scienza' niche which has consistently generated the best performance on the channel. I am using fresh data from Hacker News ('A 12-year sequence of telescope images of a star and four planets orbiting') to create a visually captivating, highly educational, and true space science short with an immediate hook in the first two seconds.",
-      "views": 6,
-      "likes": 0,
+      "views": 12,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -73,6 +73,17 @@
       "topic": "Body awareness and intelligence in Goffin's cockatoos using tools",
       "title": "This Smart Bird Builds Its Own Toolkit!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Body Awareness in Goffin's Cockatoos' to create an engaging, entertaining, and educational short with a strong hook in the first two seconds, keeping the script under 45 seconds and well within the word count limit.",
+      "views": 730,
+      "likes": 19,
+      "comments": 0
+    },
+    {
+      "id": "N7El77ibV_Y",
+      "date": "2026-10-04",
+      "niche": "Curiosità e Scienza",
+      "topic": "The Heilbronn Problem in mathematics and geometry",
+      "title": "The Geometry Puzzle That Baffled Math For Decades!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Heilbronn Problem' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and ensuring it is fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
