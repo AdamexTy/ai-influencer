@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 0,
-    "total_views": 2996
+    "total_views": 2999
   },
   "videos": [
     {
@@ -106,6 +106,17 @@
       "topic": "Room-temperature magnetic semiconductors discovered by Opus 5.5 AI agents",
       "title": "AI Just Discovered Materials That Defy Physics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates' to create an engaging, highly relevant, and futuristic short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
+      "views": 4,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "EpPs1I57HJM",
+      "date": "2026-10-06",
+      "niche": "Curiosità e Scienza",
+      "topic": "The physics of Halifax Explosion and thermal waves",
+      "title": "The Forgotten Explosion That Shook Physics Forever!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Halifax Explosion' to create a captivating historical science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
