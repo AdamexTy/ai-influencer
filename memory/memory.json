@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 0,
-    "total_views": 2999
+    "total_views": 3053
   },
   "videos": [
     {
@@ -18,7 +18,7 @@
       "topic": "La fisica dietro le pietre della fame nei fiumi europei",
       "title": "Cosa nascondono i fiumi quando si prosciugano?",
       "rationale": "Essendo il primo video del canale (memoria vuota), scelgo una nicchia sempreverde e ad alto tasso di retention (Curiosità e Scienza) sfruttando un argomento virale presente nelle tendenze di Wikipedia (Hunger stone). Lo stile è rapido, con gancio immediato e durata di circa 35 secondi.",
-      "views": 877,
+      "views": 876,
       "likes": 8,
       "comments": 0
     },
@@ -73,7 +73,7 @@
       "topic": "Body awareness and intelligence in Goffin's cockatoos using tools",
       "title": "This Smart Bird Builds Its Own Toolkit!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Body Awareness in Goffin's Cockatoos' to create an engaging, entertaining, and educational short with a strong hook in the first two seconds, keeping the script under 45 seconds and well within the word count limit.",
-      "views": 736,
+      "views": 737,
       "likes": 19,
       "comments": 0
     },
@@ -84,7 +84,7 @@
       "topic": "The Heilbronn Problem in mathematics and geometry",
       "title": "The Geometry Puzzle That Baffled Math For Decades!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Heilbronn Problem' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and ensuring it is fully in English.",
-      "views": 6,
+      "views": 8,
       "likes": 0,
       "comments": 0
     },
@@ -95,7 +95,7 @@
       "topic": "Why plain text files are the ultimate digital survivors",
       "title": "Why Plain Text Files Will Outlive Every App!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Why Plain Text Is Still One of the Best Technologies We Have' to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 53,
+      "views": 54,
       "likes": 1,
       "comments": 0
     },
@@ -106,7 +106,7 @@
       "topic": "Room-temperature magnetic semiconductors discovered by Opus 5.5 AI agents",
       "title": "AI Just Discovered Materials That Defy Physics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates' to create an engaging, highly relevant, and futuristic short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 4,
+      "views": 14,
       "likes": 0,
       "comments": 0
     },
@@ -117,6 +117,17 @@
       "topic": "The physics of Halifax Explosion and thermal waves",
       "title": "The Forgotten Explosion That Shook Physics Forever!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Halifax Explosion' to create a captivating historical science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 25,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "c72cT1GkIWQ",
+      "date": "2026-10-07",
+      "niche": "Curiosità e Scienza",
+      "topic": "The Nobel Prize in Chemistry 2026 awarded to Henri B. Kagan and Kenso Soai for asymmetric catalysis",
+      "title": "The Nobel Discovery That Shaped Everything You Own!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia and Hacker News topic 'Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
