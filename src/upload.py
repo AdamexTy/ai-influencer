@@ -1,6 +1,8 @@
 import os
+import time
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
@@ -26,9 +28,18 @@ def upload(path, plan, privacy="public"):
                     "tags": tags, "categoryId": "22", "defaultLanguage": "en"},
         "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False,
                    "containsSyntheticMedia": True}}
-    media = MediaFileUpload(path, mimetype="video/mp4", resumable=True)
-    req = yt.videos().insert(part="snippet,status", body=body, media_body=media)
-    resp = None
-    while resp is None:
-        _, resp = req.next_chunk()
-    return resp["id"]
+    for attempt in range(3):
+        try:
+            media = MediaFileUpload(path, mimetype="video/mp4", resumable=True,
+                                    chunksize=5 * 1024 * 1024)
+            req = yt.videos().insert(part="snippet,status", body=body, media_body=media)
+            resp = None
+            while resp is None:
+                _, resp = req.next_chunk()
+            return resp["id"]
+        except HttpError as e:
+            if e.resp.status in (410, 500, 502, 503, 504) and attempt < 2:
+                print("Upload failed (%s), restarting (%d/3)..." % (e.resp.status, attempt + 2))
+                time.sleep(10 * (attempt + 1))
+            else:
+                raise
