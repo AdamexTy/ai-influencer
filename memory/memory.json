@@ -7,8 +7,8 @@
     "language": "en",
     "audience": "worldwide",
     "started": "2026-09-30",
-    "subscribers": 0,
-    "total_views": 3092
+    "subscribers": 2,
+    "total_views": 3134
   },
   "videos": [
     {
@@ -40,7 +40,7 @@
       "topic": "Zone di carenza di ossigeno negli oceani e prime forme di vita",
       "title": "Gli abissi marini che creano la vita!",
       "rationale": "Sfruttando la regola del 70% insisto sulla nicchia 'Curiosità e Scienza' che ha già visto i primi esperimenti, basandomi sui dati attuali di Hacker News ('Oxygen-deprived underwater zones may not be dead zones'). Il gancio iniziale è forte e stimola la curiosità, la durata è inferiore a 45 secondi e il linguaggio è accessibile.",
-      "views": 15,
+      "views": 16,
       "likes": 2,
       "comments": 0
     },
@@ -95,7 +95,7 @@
       "topic": "Why plain text files are the ultimate digital survivors",
       "title": "Why Plain Text Files Will Outlive Every App!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Why Plain Text Is Still One of the Best Technologies We Have' to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 55,
+      "views": 56,
       "likes": 1,
       "comments": 0
     },
@@ -106,7 +106,7 @@
       "topic": "Room-temperature magnetic semiconductors discovered by Opus 5.5 AI agents",
       "title": "AI Just Discovered Materials That Defy Physics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates' to create an engaging, highly relevant, and futuristic short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 19,
+      "views": 23,
       "likes": 0,
       "comments": 0
     },
@@ -117,7 +117,7 @@
       "topic": "The physics of Halifax Explosion and thermal waves",
       "title": "The Forgotten Explosion That Shook Physics Forever!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Halifax Explosion' to create a captivating historical science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 29,
+      "views": 31,
       "likes": 0,
       "comments": 0
     },
@@ -128,7 +128,7 @@
       "topic": "The Nobel Prize in Chemistry 2026 awarded to Henri B. Kagan and Kenso Soai for asymmetric catalysis",
       "title": "The Nobel Discovery That Shaped Everything You Own!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia and Hacker News topic 'Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 26,
+      "views": 27,
       "likes": 0,
       "comments": 0
     },
@@ -139,10 +139,23 @@
       "topic": "Jonathan the tortoise and the biology of extreme animal longevity",
       "title": "The Oldest Animal On Earth Holds A Genetic Secret!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News / Wikipedia topic about 'Jonathan' (the oldest land animal on Earth) to create a fascinating biological science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 590,
+      "likes": 40,
+      "comments": 2
+    },
+    {
+      "id": "TAEGSn445S8",
+      "date": "2026-10-09",
+      "niche": "Curiosità e Scienza",
+      "topic": "Keyboard differences between Windows and Macs",
+      "title": "Why Windows and Mac Keyboards Are Totally Different!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Keyboard differences between Windows and Macs' to create an engaging, highly relevant, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
     }
   ],
-  "lessons": []
+  "lessons": [
+    "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos"
+  ]
 }
