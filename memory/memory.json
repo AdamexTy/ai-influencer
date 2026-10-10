@@ -106,7 +106,7 @@
       "topic": "Room-temperature magnetic semiconductors discovered by Opus 5.5 AI agents",
       "title": "AI Just Discovered Materials That Defy Physics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates' to create an engaging, highly relevant, and futuristic short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 23,
+      "views": 24,
       "likes": 0,
       "comments": 0
     },
@@ -139,7 +139,7 @@
       "topic": "Jonathan the tortoise and the biology of extreme animal longevity",
       "title": "The Oldest Animal On Earth Holds A Genetic Secret!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News / Wikipedia topic about 'Jonathan' (the oldest land animal on Earth) to create a fascinating biological science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 665,
+      "views": 679,
       "likes": 40,
       "comments": 2
     },
@@ -150,7 +150,7 @@
       "topic": "Keyboard differences between Windows and Macs",
       "title": "Why Windows and Mac Keyboards Are Totally Different!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Keyboard differences between Windows and Macs' to create an engaging, highly relevant, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 63,
+      "views": 67,
       "likes": 1,
       "comments": 0
     },
@@ -161,7 +161,7 @@
       "topic": "The physics behind how honeycombs are naturally formed as circles and become hexagons",
       "title": "Why Honeycombs Are Perfectly Hexagonal!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche which consistently drives audience interest. The topic is a fascinating, true, and easily visualizable scientific fact about nature and physics, featuring a strong hook in the first two seconds and a script length of around 75 words (approx. 30 seconds).",
-      "views": 76,
+      "views": 77,
       "likes": 0,
       "comments": 0
     },
@@ -172,7 +172,7 @@
       "topic": "Germany transforms former coal mines into Europe's largest lake landscape",
       "title": "Germany Turned Massive Coal Mines Into Huge Lakes!",
       "rationale": "Following the 70% rule, I am sticking with the proven 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Germany transforming former coal mines into Europe's largest lake landscape to create an engaging, visual, and environmentally fascinating short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 719,
+      "views": 726,
       "likes": 11,
       "comments": 1
     },
@@ -194,12 +194,24 @@
       "topic": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
       "title": "What Chernobyl's Fuel Is Doing After 40 Years!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the fresh Hacker News trend 'Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years' to create a gripping, true, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 306,
+      "likes": 9,
+      "comments": 0
+    },
+    {
+      "id": "HRXx74s-ZIk",
+      "date": "2026-10-10",
+      "niche": "Curiosità e Scienza",
+      "topic": "Chernobyl's unexpectedly stable nuclear fuel particles discovered after 40 years",
+      "title": "The Chernobyl Fuel That Refuses to Decay!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Chernobyl particles to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English, avoiding previous failed titles.",
       "views": 0,
       "likes": 0,
       "comments": 0
     }
   ],
   "lessons": [
-    "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos"
+    "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos",
+    "Plan rejected (Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years): duplicate title"
   ]
 }
