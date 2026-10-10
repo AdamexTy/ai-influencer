@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 3,
-    "total_views": 3142
+    "total_views": 3145
   },
   "videos": [
     {
@@ -84,7 +84,7 @@
       "topic": "The Heilbronn Problem in mathematics and geometry",
       "title": "The Geometry Puzzle That Baffled Math For Decades!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Heilbronn Problem' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and ensuring it is fully in English.",
-      "views": 8,
+      "views": 9,
       "likes": 0,
       "comments": 0
     },
@@ -117,7 +117,7 @@
       "topic": "The physics of Halifax Explosion and thermal waves",
       "title": "The Forgotten Explosion That Shook Physics Forever!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Halifax Explosion' to create a captivating historical science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 32,
+      "views": 35,
       "likes": 0,
       "comments": 0
     },
@@ -128,7 +128,7 @@
       "topic": "The Nobel Prize in Chemistry 2026 awarded to Henri B. Kagan and Kenso Soai for asymmetric catalysis",
       "title": "The Nobel Discovery That Shaped Everything You Own!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia and Hacker News topic 'Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 27,
+      "views": 30,
       "likes": 0,
       "comments": 0
     },
@@ -139,7 +139,7 @@
       "topic": "Jonathan the tortoise and the biology of extreme animal longevity",
       "title": "The Oldest Animal On Earth Holds A Genetic Secret!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News / Wikipedia topic about 'Jonathan' (the oldest land animal on Earth) to create a fascinating biological science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 628,
+      "views": 665,
       "likes": 40,
       "comments": 2
     },
@@ -150,7 +150,7 @@
       "topic": "Keyboard differences between Windows and Macs",
       "title": "Why Windows and Mac Keyboards Are Totally Different!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Keyboard differences between Windows and Macs' to create an engaging, highly relevant, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 49,
+      "views": 63,
       "likes": 1,
       "comments": 0
     },
@@ -161,7 +161,7 @@
       "topic": "The physics behind how honeycombs are naturally formed as circles and become hexagons",
       "title": "Why Honeycombs Are Perfectly Hexagonal!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche which consistently drives audience interest. The topic is a fascinating, true, and easily visualizable scientific fact about nature and physics, featuring a strong hook in the first two seconds and a script length of around 75 words (approx. 30 seconds).",
-      "views": 49,
+      "views": 76,
       "likes": 0,
       "comments": 0
     },
@@ -172,9 +172,9 @@
       "topic": "Germany transforms former coal mines into Europe's largest lake landscape",
       "title": "Germany Turned Massive Coal Mines Into Huge Lakes!",
       "rationale": "Following the 70% rule, I am sticking with the proven 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Germany transforming former coal mines into Europe's largest lake landscape to create an engaging, visual, and environmentally fascinating short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 344,
-      "likes": 9,
-      "comments": 0
+      "views": 719,
+      "likes": 11,
+      "comments": 1
     },
     {
       "id": "JT45x1NATPc",
@@ -183,6 +183,17 @@
       "topic": "Finding a forgotten meteorite using AI archive analysis",
       "title": "AI Just Found a Forgotten Space Rock on Earth!",
       "rationale": "Following the 70% rule, I am sticking with the proven 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Pointing AI at archives found a forgotten meteorite' to create an engaging, highly entertaining, and true science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 2,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "-346T4r8pbQ",
+      "date": "2026-10-10",
+      "niche": "Curiosità e Scienza",
+      "topic": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
+      "title": "What Chernobyl's Fuel Is Doing After 40 Years!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the fresh Hacker News trend 'Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years' to create a gripping, true, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
