@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 3,
-    "total_views": 3145
+    "total_views": 3153
   },
   "videos": [
     {
@@ -95,7 +95,7 @@
       "topic": "Why plain text files are the ultimate digital survivors",
       "title": "Why Plain Text Files Will Outlive Every App!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Why Plain Text Is Still One of the Best Technologies We Have' to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 56,
+      "views": 58,
       "likes": 1,
       "comments": 0
     },
@@ -139,7 +139,7 @@
       "topic": "Jonathan the tortoise and the biology of extreme animal longevity",
       "title": "The Oldest Animal On Earth Holds A Genetic Secret!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News / Wikipedia topic about 'Jonathan' (the oldest land animal on Earth) to create a fascinating biological science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 679,
+      "views": 681,
       "likes": 40,
       "comments": 2
     },
@@ -172,7 +172,7 @@
       "topic": "Germany transforms former coal mines into Europe's largest lake landscape",
       "title": "Germany Turned Massive Coal Mines Into Huge Lakes!",
       "rationale": "Following the 70% rule, I am sticking with the proven 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Germany transforming former coal mines into Europe's largest lake landscape to create an engaging, visual, and environmentally fascinating short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 726,
+      "views": 743,
       "likes": 11,
       "comments": 1
     },
@@ -194,9 +194,9 @@
       "topic": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
       "title": "What Chernobyl's Fuel Is Doing After 40 Years!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the fresh Hacker News trend 'Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years' to create a gripping, true, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 306,
-      "likes": 9,
-      "comments": 0
+      "views": 624,
+      "likes": 14,
+      "comments": 1
     },
     {
       "id": "HRXx74s-ZIk",
@@ -205,6 +205,17 @@
       "topic": "Chernobyl's unexpectedly stable nuclear fuel particles discovered after 40 years",
       "title": "The Chernobyl Fuel That Refuses to Decay!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Chernobyl particles to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English, avoiding previous failed titles.",
+      "views": 236,
+      "likes": 10,
+      "comments": 0
+    },
+    {
+      "id": "bdgJI5IGjnY",
+      "date": "2026-10-10",
+      "niche": "Curiosità e Scienza",
+      "topic": "The mechanics of the lightbulb computer and mechanical logic gates",
+      "title": "The Computer Built Entirely Out Of Lightbulbs!",
+      "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Lightbulb Computer' to create an engaging, highly visual, and educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
