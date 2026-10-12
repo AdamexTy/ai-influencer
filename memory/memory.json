@@ -7,7 +7,7 @@
     "language": "en",
     "audience": "worldwide",
     "started": "2026-09-30",
-    "subscribers": 4,
+    "subscribers": 5,
     "total_views": 6289
   },
   "videos": [
@@ -194,7 +194,7 @@
       "topic": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
       "title": "What Chernobyl's Fuel Is Doing After 40 Years!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the fresh Hacker News trend 'Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years' to create a gripping, true, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 867,
+      "views": 868,
       "likes": 14,
       "comments": 1
     },
@@ -216,7 +216,7 @@
       "topic": "The mechanics of the lightbulb computer and mechanical logic gates",
       "title": "The Computer Built Entirely Out Of Lightbulbs!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Lightbulb Computer' to create an engaging, highly visual, and educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 254,
+      "views": 255,
       "likes": 2,
       "comments": 0
     },
@@ -227,7 +227,7 @@
       "topic": " Terence Tao's Math 2.0 approach to modern mathematics",
       "title": "How Terence Tao Is Rewriting All of Mathematics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Terence Tao: Math 2.0' to create an engaging, highly educational, and true science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 104,
+      "views": 113,
       "likes": 1,
       "comments": 0
     },
@@ -249,8 +249,8 @@
       "topic": "Akhetonics Photonic Computing and 1,000x faster optical CPUs",
       "title": "Light Just Replaced Electricity in CPUs!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Akhetonics Photonic Computing: 1,000x Faster CPUs' to create an engaging, highly relevant tech science short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 65,
-      "likes": 1,
+      "views": 73,
+      "likes": 2,
       "comments": 0
     },
     {
@@ -260,8 +260,8 @@
       "topic": "The secret behind why orange cats have their unique coat patterns discovered after extensive research",
       "title": "The 60-Year Secret Of Orange Cats Finally Solved!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Secret of Orange Cats Revealed After 60-Year Search' to create an engaging, highly entertaining, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 4,
-      "likes": 0,
+      "views": 394,
+      "likes": 19,
       "comments": 0
     },
     {
@@ -271,6 +271,17 @@
       "topic": "The science and history behind orange cats and their genetics",
       "title": "Why Every Single Orange Cat Shares This Hidden Gene!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia/Hacker News topic regarding the 'Secret of Orange Cats Revealed After 60-Year Search' to craft an engaging, true, and entertaining short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "ao47zB8Zi1k",
+      "date": "2026-10-12",
+      "niche": "Curiosità e Scienza",
+      "topic": "The making and hardware constraints of Super Mario 64 explained",
+      "title": "How Super Mario 64 Fit Into Almost Nothing!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Making Of Super Mario 64' to create an engaging, entertaining, and educational short with a strong hook in the first two seconds, keeping the script under 45 seconds and well within the word count limit.",
       "views": 0,
       "likes": 0,
       "comments": 0
