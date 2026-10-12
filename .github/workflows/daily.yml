@@ -24,6 +24,12 @@ jobs:
       - name: Install FFmpeg and fonts
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
 
+      - name: Cache Piper voice
+        uses: actions/cache@v4
+        with:
+          path: voices
+          key: piper-voice-en_US-lessac-medium
+
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 

@@ -1,15 +1,13 @@
 import os
 import math
-import asyncio
+import sys
 import subprocess
 import requests
-import edge_tts
 from faster_whisper import WhisperModel
 
 WORK = "work"
-VOICE = "en-US-JennyNeural"      # femminile, tono caldo, molto usata e naturale
-# VOICE = "en-GB-SoniaNeural"    # britannica, molto chiara
-# VOICE = "en-US-GuyNeural"      # maschile
+VOICE = "en_US-lessac-medium"   # Piper, gratuito e offline. Alternative: en_US-amy-medium, en_GB-alba-medium
+VOICES = "voices"
 W, H = 720, 1280
 
 def sh(cmd):
@@ -21,9 +19,11 @@ def duration(path):
     return float(out.strip())
 
 def make_voice(text, path):
-    async def go():
-        await edge_tts.Communicate(text, VOICE).save(path)
-    asyncio.run(go())
+    model = os.path.join(VOICES, VOICE + ".onnx")
+    if not os.path.exists(model):
+        sh([sys.executable, "-m", "piper.download_voices", VOICE, "--download-dir", VOICES])
+    subprocess.run([sys.executable, "-m", "piper", "-m", model, "-f", path],
+                   input=text.encode("utf-8"), check=True)
 
 def fetch_clips(keywords, need):
     headers = {"Authorization": os.environ["PEXELS_API_KEY"]}
@@ -60,7 +60,7 @@ def make_srt(audio, srt):
 
 def make_video(plan):
     os.makedirs(WORK, exist_ok=True)
-    voice = os.path.join(WORK, "voice.mp3")
+    voice = os.path.join(WORK, "voice.wav")
     make_voice(plan["script"], voice)
     dur = duration(voice)
     seg = 4.0
