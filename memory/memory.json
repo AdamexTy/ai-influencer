@@ -7,7 +7,7 @@
     "language": "en",
     "audience": "worldwide",
     "started": "2026-09-30",
-    "subscribers": 5,
+    "subscribers": 6,
     "total_views": 6289
   },
   "videos": [
@@ -95,7 +95,7 @@
       "topic": "Why plain text files are the ultimate digital survivors",
       "title": "Why Plain Text Files Will Outlive Every App!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Why Plain Text Is Still One of the Best Technologies We Have' to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 59,
+      "views": 60,
       "likes": 1,
       "comments": 0
     },
@@ -161,7 +161,7 @@
       "topic": "The physics behind how honeycombs are naturally formed as circles and become hexagons",
       "title": "Why Honeycombs Are Perfectly Hexagonal!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche which consistently drives audience interest. The topic is a fascinating, true, and easily visualizable scientific fact about nature and physics, featuring a strong hook in the first two seconds and a script length of around 75 words (approx. 30 seconds).",
-      "views": 79,
+      "views": 78,
       "likes": 0,
       "comments": 0
     },
@@ -172,7 +172,7 @@
       "topic": "Germany transforms former coal mines into Europe's largest lake landscape",
       "title": "Germany Turned Massive Coal Mines Into Huge Lakes!",
       "rationale": "Following the 70% rule, I am sticking with the proven 'Curiosità e Scienza' niche. I used the trending Hacker News topic about Germany transforming former coal mines into Europe's largest lake landscape to create an engaging, visual, and environmentally fascinating short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 786,
+      "views": 787,
       "likes": 11,
       "comments": 1
     },
@@ -227,7 +227,7 @@
       "topic": " Terence Tao's Math 2.0 approach to modern mathematics",
       "title": "How Terence Tao Is Rewriting All of Mathematics!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Terence Tao: Math 2.0' to create an engaging, highly educational, and true science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 113,
+      "views": 129,
       "likes": 1,
       "comments": 0
     },
@@ -238,7 +238,7 @@
       "topic": "Mathematics and the paradox of infinite hotel rooms",
       "title": "The Hotel With Infinite Rooms That Never Fills Up!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche, utilizing a trending mathematical topic from Wikipedia ('Mathematics') to create an engaging, highly educational short with a strong hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 30,
+      "views": 36,
       "likes": 0,
       "comments": 0
     },
@@ -249,8 +249,8 @@
       "topic": "Akhetonics Photonic Computing and 1,000x faster optical CPUs",
       "title": "Light Just Replaced Electricity in CPUs!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Akhetonics Photonic Computing: 1,000x Faster CPUs' to create an engaging, highly relevant tech science short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
-      "views": 73,
-      "likes": 2,
+      "views": 114,
+      "likes": 3,
       "comments": 0
     },
     {
@@ -260,8 +260,8 @@
       "topic": "The secret behind why orange cats have their unique coat patterns discovered after extensive research",
       "title": "The 60-Year Secret Of Orange Cats Finally Solved!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Secret of Orange Cats Revealed After 60-Year Search' to create an engaging, highly entertaining, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 394,
-      "likes": 19,
+      "views": 572,
+      "likes": 21,
       "comments": 0
     },
     {
@@ -282,6 +282,17 @@
       "topic": "The making and hardware constraints of Super Mario 64 explained",
       "title": "How Super Mario 64 Fit Into Almost Nothing!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Making Of Super Mario 64' to create an engaging, entertaining, and educational short with a strong hook in the first two seconds, keeping the script under 45 seconds and well within the word count limit.",
+      "views": 572,
+      "likes": 5,
+      "comments": 0
+    },
+    {
+      "id": "mxFLkKkvOCA",
+      "date": "2026-10-13",
+      "niche": "Curiosità e Scienza",
+      "topic": "The baffling intelligence and problem-solving of a single cell organism",
+      "title": "This Brainless Single Cell Can Outsmart Mazes!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The baffling intelligence of a single cell' to create an engaging, highly visual, and educational short with an immediate hook in the first two seconds, keeping the script within the required 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
@@ -289,6 +300,7 @@
   ],
   "lessons": [
     "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos",
-    "Plan rejected (Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years): duplicate title"
+    "Plan rejected (Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years): duplicate title",
+    "Attempt failed with a technical error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
   ]
 }
