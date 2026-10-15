@@ -194,7 +194,7 @@
       "topic": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
       "title": "What Chernobyl's Fuel Is Doing After 40 Years!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the fresh Hacker News trend 'Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years' to create a gripping, true, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 865,
+      "views": 866,
       "likes": 14,
       "comments": 1
     },
@@ -282,7 +282,7 @@
       "topic": "The making and hardware constraints of Super Mario 64 explained",
       "title": "How Super Mario 64 Fit Into Almost Nothing!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The Making Of Super Mario 64' to create an engaging, entertaining, and educational short with a strong hook in the first two seconds, keeping the script under 45 seconds and well within the word count limit.",
-      "views": 655,
+      "views": 657,
       "likes": 7,
       "comments": 0
     },
@@ -304,7 +304,7 @@
       "topic": "Ansel Adams and the Zone System of photographic exposure",
       "title": "The Photography Hack That Mastered Light Forever!",
       "rationale": "Following the 70% rule, I am staying within the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Ansel Adams' to create an engaging, educational short about his famous photographic exposure technique, featuring an immediate hook in the first 2 seconds, keeping the script within the 30-45 second range and fully in English.",
-      "views": 56,
+      "views": 58,
       "likes": 1,
       "comments": 0
     },
@@ -359,7 +359,7 @@
       "topic": "The surprising history of how Biscoff cookies were created and became a global passenger favorite",
       "title": "The Accidental Cookie That Conquered The World!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Biscoff Cookies Were Supposed to Be Temporary. Then Passengers Fell in Love' to create an engaging, entertaining, and true short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 168,
+      "views": 198,
       "likes": 0,
       "comments": 0
     },
@@ -370,6 +370,17 @@
       "topic": "The engineering and physics of how articulated buses bend around sharp corners",
       "title": "How Do Massive Articulated Buses Never Crash?",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The engineering that allows articulated buses to bend' to create an engaging and educational short with a strong hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 406,
+      "likes": 6,
+      "comments": 1
+    },
+    {
+      "id": "5_DjtdOmjzA",
+      "date": "2026-10-15",
+      "niche": "Curiosità e Scienza",
+      "topic": "Celebrating 70 years of Fortran and its impact on modern computing",
+      "title": "The 70-Year-Old Code Still Running Our World!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Celebrating 70 Years of Fortran' to create an engaging, educational short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
@@ -378,6 +389,7 @@
   "lessons": [
     "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos",
     "Plan rejected (Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years): duplicate title",
-    "Attempt failed with a technical error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    "Attempt failed with a technical error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
+    "Plan rejected (The engineering and physics behind how articulated buses bend around sharp corners): duplicate title"
   ]
 }
