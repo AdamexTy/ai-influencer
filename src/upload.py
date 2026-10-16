@@ -8,6 +8,9 @@ from googleapiclient.http import MediaFileUpload
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
           "https://www.googleapis.com/auth/youtube.readonly"]
 
+# YouTube category: 27 = Education, 28 = Science & Technology, 20 = Gaming.
+CATEGORY_ID = "27"
+
 def get_service():
     creds = Credentials(
         None,
@@ -22,10 +25,11 @@ def upload(path, plan, privacy="public"):
     yt = get_service()
     tags = [h.replace("#", "") for h in plan.get("hashtags", [])]
     desc = plan["description"] + "\n\n" + " ".join("#" + t for t in tags) + \
-        "\n\nCanale gestito da un'intelligenza artificiale. Clip: Pexels."
+        "\n\nChannel run by an AI. Footage: Pexels."
     body = {
         "snippet": {"title": plan["title"][:100], "description": desc,
-                    "tags": tags, "categoryId": "22", "defaultLanguage": "en"},
+                    "tags": tags, "categoryId": CATEGORY_ID,
+                    "defaultLanguage": "en", "defaultAudioLanguage": "en"},
         "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False,
                    "containsSyntheticMedia": True}}
     for attempt in range(3):

@@ -1,13 +1,20 @@
 name: ai-influencer
 on:
   schedule:
+    # Three runs a day (UTC). GitHub's cron is best-effort and can be delayed
+    # or, rarely, skipped; overlapping runs are serialised by the
+    # `concurrency` group below so two runs never race on memory.json.
     - cron: "0 13 * * *"
-    - cron: "30 16 * * *"    
-    - cron: "0 19 * * *"  
+    - cron: "30 16 * * *"
+    - cron: "0 19 * * *"
   workflow_dispatch:         # allows manual runs from the Actions tab
 
 permissions:
   contents: write
+
+concurrency:
+  group: ai-influencer
+  cancel-in-progress: false
 
 jobs:
   run:
@@ -30,6 +37,12 @@ jobs:
           path: voices
           key: piper-voice-en_US-lessac-medium
 
+      - name: Cache Whisper models
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: whisper-models-${{ runner.os }}
+
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
@@ -43,11 +56,44 @@ jobs:
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: python src/main.py
 
+      - name: Alert (optional, only if the secrets are set)
+        if: always()
+        env:
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+          NTFY_URL: ${{ secrets.NTFY_URL }}
+        run: |
+          if [ -n "${HEALTHCHECK_URL:-}" ]; then
+            if [ "${{ job.status }}" = "success" ]; then
+              curl -fsS --retry 3 "${HEALTHCHECK_URL}" || true
+            else
+              curl -fsS --retry 3 "${HEALTHCHECK_URL}/fail" || true
+            fi
+          fi
+          if [ "${{ job.status }}" != "success" ] && [ -n "${NTFY_URL:-}" ]; then
+            curl -fsS -d "ai-influencer run ${{ job.status }}: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" "${NTFY_URL}" || true
+          fi
+
       - name: Save memory back to the repo
         if: always()
         run: |
+          set +e
           git config user.name "ai-bot"
           git config user.email "ai-bot@users.noreply.github.com"
           mkdir -p memory
           git add memory
-          git diff --staged --quiet || (git commit -m "update memory" && git push)
+          if git diff --staged --quiet; then
+            echo "No memory changes to commit."
+            exit 0
+          fi
+          git commit -m "update memory"
+          pushed=0
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then pushed=1; break; fi
+            echo "Push attempt $i failed, retrying..."
+            sleep 5
+          done
+          if [ "$pushed" != "1" ]; then
+            echo "ERROR: could not push memory after 5 attempts."
+            exit 1
+          fi

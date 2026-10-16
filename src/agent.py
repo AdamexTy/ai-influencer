@@ -16,15 +16,24 @@ RULES = (
     "targeting a global audience. Your goal is to grow the channel "
     "(views, retention, subscribers) fully autonomously and honestly. "
     "You decide the niche, topic and style. "
-    "RULES: (1) use the market data and the memory of past results; "
-    "(2) about 70% of the time stick to niches/formats that performed well, "
-    "30% experiment with something new; (3) never repeat topics or titles "
-    "already published; (4) only true, verifiable, useful or entertaining content; "
-    "forbidden: misinformation, medical/financial/legal advice, partisan politics, "
-    "defamation of real people, hate speech, adult content; (5) spoken script "
-    "25-45 seconds long (70-120 words), with a hook in the first 2 seconds; "
-    "(6) never attribute invented quotes to real people; (7) write the script "
-    "entirely in English, since it will be read aloud by an English voice."
+    "RULES: (1) use the market data and the memory of past results. "
+    "(2) Before choosing, look at which past videos got the most views/likes "
+    "and do more of what actually worked, avoiding what flopped. "
+    "(3) About 70% of the time stick to niches/formats that performed well, "
+    "30% experiment with something new; if the recent videos are all in the "
+    "same niche and nothing is clearly winning, you MUST explore a different "
+    "niche or format this time. "
+    "(4) Never repeat topics or titles already published. "
+    "(5) Only true, verifiable, useful or entertaining content; forbidden: "
+    "misinformation, medical/financial/legal advice, partisan politics, "
+    "defamation of real people, hate speech, adult content. "
+    "(6) Spoken script 25-45 seconds long (70-120 words), with a hook in the "
+    "first 2 seconds and a short call to action at the end (e.g. an invitation "
+    "to follow for more). "
+    "(7) Never attribute invented quotes to real people. "
+    "(8) Write the script entirely in English, since it will be read aloud by "
+    "an English voice. "
+    "(9) Stay coherent with the channel identity given below."
 )
 
 FORMAT = (
@@ -36,9 +45,11 @@ FORMAT = (
 
 
 def _ask(prompt):
-    """Calls Gemini: tries models in order, immediately falls back to
-    the next one if the quota is exhausted, retries with backoff if the
-    server is just temporarily overloaded."""
+    """Calls Gemini: tries models in order. Falls back to the next model on a
+    daily-quota error OR on any other error (wrong model name, malformed
+    output, ...), so a single bad model can never abort the whole chain.
+    Only retries the same model with backoff when the server is temporarily
+    overloaded."""
     last_error = None
     for model in MODELS:
         for attempt in range(3):
@@ -53,20 +64,50 @@ def _ask(prompt):
                 last_error = e
                 error_str = str(e)
                 if "RESOURCE_EXHAUSTED" in error_str or "429" in error_str:
-                    print(f"⚠️ Quota exhausted for {model}, trying the next model...")
-                    break  # no point retrying the same model: it's a daily quota
+                    print("Quota exhausted for %s, trying the next model..." % model)
+                    break  # daily quota: no point retrying the same model
                 elif "503" in error_str or "UNAVAILABLE" in error_str:
                     wait_time = 5 * (attempt + 1)
-                    print(f"⏳ {model} is busy, retrying in {wait_time}s... (attempt {attempt + 1}/3)")
+                    print("%s busy, retrying in %ss... (attempt %d/3)"
+                          % (model, wait_time, attempt + 1))
                     time.sleep(wait_time)
                 else:
-                    raise
+                    print("%s failed (%s), trying the next model..."
+                          % (model, str(e)[:160]))
+                    break
     raise last_error
+
+
+def _dominant_niche(videos):
+    counts = {}
+    for v in videos:
+        n = (v.get("niche") or "").strip()
+        if n:
+            counts[n] = counts.get(n, 0) + 1
+    return max(counts, key=counts.get) if counts else ""
+
+
+def _identity(memory):
+    """The channel identity handed to the model. The niche focus is derived
+    from what the channel has actually been publishing, so the prompt stays
+    coherent even if the stored channel record is stale or was never applied
+    by hand."""
+    ch = memory.get("channel", {})
+    ident = {}
+    for k in ("name", "tone", "language", "audience"):
+        if ch.get(k):
+            ident[k] = ch[k]
+    focus = _dominant_niche(memory.get("videos", [])) or ch.get("niche", "")
+    if focus:
+        ident["current_niche_focus"] = focus
+    return ident
 
 
 def decide(market, memory):
     recent = memory.get("videos", [])[-30:]
-    prompt = (RULES + "\n\nMARKET DATA:\n" + json.dumps(market, ensure_ascii=False)[:6000]
+    prompt = (RULES
+              + "\n\nCHANNEL IDENTITY:\n" + json.dumps(_identity(memory), ensure_ascii=False)
+              + "\n\nMARKET DATA:\n" + json.dumps(market, ensure_ascii=False)[:6000]
               + "\n\nMEMORY (past videos and their results):\n"
               + json.dumps(recent, ensure_ascii=False)[:6000]
               + "\n\nLESSONS LEARNED:\n" + json.dumps(memory.get("lessons", [])[-15:], ensure_ascii=False)

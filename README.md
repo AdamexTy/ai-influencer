@@ -30,7 +30,7 @@ Gemini decides: niche, topic, script, title, keywords          |
 Local guardrails ---rejected---> log a lesson ------------------+
         |
         v
-Voice (edge-tts) + stock clips (Pexels) + subtitles (Whisper) + FFmpeg
+Voice (Piper) + stock clips (Pexels) + subtitles (Whisper) + FFmpeg
         |
         v
 Upload to YouTube ---> save video id to memory
@@ -45,7 +45,7 @@ on GitHub's free Actions runners — no computer needs to stay on.
 |---|---|---|
 | Hosting / scheduling | GitHub Actions | Unlimited on public repos |
 | Decision-making (LLM) | Gemini API | **As low as 20 requests/day** per model on new projects — see note below |
-| Voice | edge-tts | Free, unofficial use of Microsoft's voices |
+| Voice | Piper (`piper-tts`) | Free, offline (no API, no network) |
 | Stock video | Pexels API | Free with a key |
 | Video editing | FFmpeg | Open source |
 | Subtitles | faster-whisper (`base` model) | Open source, runs on CPU |
@@ -112,6 +112,11 @@ A few steps genuinely require a person — Google won't let a script do them:
 9. **GitHub repo secrets**: Settings → Secrets and variables → Actions →
    add `GEMINI_API_KEY`, `PEXELS_API_KEY`, `YOUTUBE_API_KEY`, `YT_CLIENT_ID`,
    `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN`.
+   - **Optional, for monitoring (both free):** add `HEALTHCHECK_URL` (a
+     healthchecks.io ping URL) so you are alerted if a run stops happening,
+     and/or `NTFY_URL` (e.g. `https://ntfy.sh/your-topic`) so you get a
+     notification when a run fails. If you don't add them, the steps are
+     simply skipped — nothing breaks.
 10. **Workflow permissions**: Settings → Actions → General → Workflow
     permissions → **Read and write permissions** (needed so the agent can
     commit its memory back to the repo).
@@ -138,7 +143,7 @@ ai-influencer/
     market.py       free market signals: YouTube trending, Hacker News, Wikipedia
     agent.py         talks to Gemini; decides niche/topic/script; model fallback
     guardrails.py     local, free safety/sanity checks (no API calls)
-    produce.py        voice (edge-tts) + clips (Pexels) + subtitles (Whisper) + FFmpeg
+    produce.py        voice (Piper) + clips (Pexels) + subtitles (Whisper) + FFmpeg
     upload.py          publishes to YouTube, declares synthetic media
     feedback.py        reads back view/like/subscriber counts into memory
     main.py             orchestrates one full run
@@ -156,6 +161,17 @@ the logs under the "Run the agent" step. A full run (market scan, LLM
 decision, voice, clips, subtitles, FFmpeg encode, upload) typically takes
 5–15 minutes on GitHub's shared runners — longest on the very first run,
 since the Whisper model has to download.
+
+## Monitoring and scheduling (optional, free)
+
+- **Scheduling.** The workflow requests three runs a day (13:00, 16:30,
+  19:00 UTC). GitHub's cron is best-effort: runs can be delayed by minutes
+  and, rarely, skipped. A `concurrency` group serialises runs so two of them
+  can never race on `memory.json`.
+- **Alerting.** If you add `HEALTHCHECK_URL` and/or `NTFY_URL` (see setup,
+  step 9), you get a heartbeat ping on every run and a notification when one
+  fails. This is the only way to notice if, for example, the OAuth token
+  expires — otherwise the pipeline stops silently.
 
 ## Safety guardrails already in place
 

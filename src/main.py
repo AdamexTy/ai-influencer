@@ -21,7 +21,10 @@ def save(mem):
 
 def main():
     mem = load()
-    update_metrics(mem)
+    try:
+        update_metrics(mem)
+    except Exception as e:
+        print("Metrics update failed (continuing anyway):", e)
     market = collect()
 
     plan = None
@@ -43,8 +46,14 @@ def main():
         save(mem)
         return
 
-    path = make_video(plan)
-    vid = upload(path, plan)
+    try:
+        path = make_video(plan)
+        vid = upload(path, plan)
+    except Exception as e:
+        mem["lessons"].append("Production/upload failed: %s" % str(e)[:200])
+        save(mem)
+        raise
+
     mem["videos"].append({
         "id": vid, "date": datetime.date.today().isoformat(),
         "niche": plan["niche"], "topic": plan["topic"], "title": plan["title"],

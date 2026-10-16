@@ -1,7 +1,7 @@
-requests
-piper-tts
-google-genai
-google-api-python-client
-google-auth
-google-auth-oauthlib
-faster-whisper
+requests==2.34.2
+piper-tts==1.8.0
+google-genai==2.31.0
+google-api-python-client==2.201.0
+google-auth==2.62.0
+google-auth-oauthlib==1.5.0
+faster-whisper==1.2.1

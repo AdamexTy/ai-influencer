@@ -3,53 +3,89 @@ import math
 import sys
 import subprocess
 import requests
-from faster_whisper import WhisperModel
 
 WORK = "work"
 VOICE = "en_US-lessac-medium"   # Piper, gratuito e offline. Alternative: en_US-amy-medium, en_GB-alba-medium
 VOICES = "voices"
 W, H = 720, 1280
 
+
 def sh(cmd):
-    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    p = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    if p.returncode != 0:
+        print("Command failed:", " ".join(cmd))
+        print((p.stderr or "")[-2000:])
+        raise subprocess.CalledProcessError(p.returncode, cmd)
+
 
 def duration(path):
     out = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries",
                                    "format=duration", "-of", "csv=p=0", path])
     return float(out.strip())
 
+
 def make_voice(text, path):
     model = os.path.join(VOICES, VOICE + ".onnx")
     if not os.path.exists(model):
         sh([sys.executable, "-m", "piper.download_voices", VOICE, "--download-dir", VOICES])
-    subprocess.run([sys.executable, "-m", "piper", "-m", model, "-f", path],
-                   input=text.encode("utf-8"), check=True)
+    p = subprocess.run([sys.executable, "-m", "piper", "-m", model, "-f", path],
+                       input=text.encode("utf-8"),
+                       stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if p.returncode != 0:
+        print("Piper failed:", (p.stderr or b"").decode("utf-8", "ignore")[-2000:])
+        raise subprocess.CalledProcessError(p.returncode, "piper")
+    if not os.path.exists(path) or os.path.getsize(path) == 0:
+        raise RuntimeError("Voice synthesis produced no audio")
+
 
 def fetch_clips(keywords, need):
     headers = {"Authorization": os.environ["PEXELS_API_KEY"]}
-    urls = []
+    urls, seen = [], set()
     for kw in keywords:
-        r = requests.get("https://api.pexels.com/videos/search", headers=headers, timeout=30,
-                         params={"query": kw, "orientation": "portrait", "per_page": 3})
+        try:
+            r = requests.get("https://api.pexels.com/videos/search", headers=headers, timeout=30,
+                             params={"query": kw, "orientation": "portrait",
+                                     "size": "medium", "per_page": 5})
+        except requests.RequestException as e:
+            print("Clip search failed for %r: %s" % (kw, e))
+            continue
         if r.status_code != 200:
+            print("Clip search returned HTTP %s for %r" % (r.status_code, kw))
             continue
         for v in r.json().get("videos", []):
-            files = sorted(v["video_files"], key=lambda f: abs(f.get("width", 0) - W))
+            vid = v.get("id")
+            if vid in seen:
+                continue
+            files = sorted(v.get("video_files", []), key=lambda f: abs(f.get("width", 0) - W))
             if files:
                 urls.append(files[0]["link"])
+                seen.add(vid)
         if len(urls) >= need:
             break
     paths = []
-    for i, u in enumerate(urls[:need]):
-        p = os.path.join(WORK, "raw%d.mp4" % i)
+    for u in urls:
+        if len(paths) >= need:
+            break
+        try:
+            resp = requests.get(u, timeout=120)
+        except requests.RequestException as e:
+            print("Clip download failed: %s" % e)
+            continue
+        if resp.status_code != 200 or not resp.content:
+            print("Skipping clip (HTTP %s, %d bytes)" % (resp.status_code, len(resp.content or b"")))
+            continue
+        p = os.path.join(WORK, "raw%d.mp4" % len(paths))
         with open(p, "wb") as f:
-            f.write(requests.get(u, timeout=120).content)
+            f.write(resp.content)
         paths.append(p)
     return paths
 
+
 def make_srt(audio, srt):
+    from faster_whisper import WhisperModel
     model = WhisperModel("base", device="cpu", compute_type="int8")
     segs, _ = model.transcribe(audio, language="en", beam_size=5, vad_filter=True)
+
     def ts(t):
         h, rem = divmod(t, 3600)
         m, s = divmod(rem, 60)
@@ -57,6 +93,7 @@ def make_srt(audio, srt):
     with open(srt, "w", encoding="utf-8") as f:
         for n, s in enumerate(segs, 1):
             f.write("%d\n%s --> %s\n%s\n\n" % (n, ts(s.start), ts(s.end), s.text.strip()))
+
 
 def make_video(plan):
     os.makedirs(WORK, exist_ok=True)
@@ -87,6 +124,7 @@ def make_video(plan):
     style = "FontName=DejaVu Sans,Bold=1,FontSize=16,Alignment=2,MarginV=180,Outline=2"
     sh(["ffmpeg", "-y", "-i", os.path.join(WORK, "silent.mp4"), "-i", voice,
         "-vf", "subtitles=%s/subs.srt:force_style='%s'" % (WORK, style),
+        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
         "-c:v", "libx264", "-preset", "veryfast", "-crf", "28",
         "-c:a", "aac", "-b:a", "128k", "-shortest", final])
     return final
