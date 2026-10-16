@@ -3,7 +3,18 @@ import json
 import time
 from google import genai
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+_client = None
+
+
+def _get_client():
+    global _client
+    if _client is not None:
+        return _client
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY is not set")
+    _client = genai.Client(api_key=api_key)
+    return _client
 
 # Preference order: the first model usually has the highest free daily
 # quota. If a model runs out of quota or doesn't respond, the code
@@ -51,6 +62,7 @@ def _ask(prompt):
     Only retries the same model with backoff when the server is temporarily
     overloaded."""
     last_error = None
+    client = _get_client()
     for model in MODELS:
         for attempt in range(3):
             try:

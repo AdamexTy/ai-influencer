@@ -423,6 +423,9 @@
     "Plan rejected (Man discovers his parents' coffee machine used 1TB of data in 10 days): blocked word: diagnos",
     "Plan rejected (Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years): duplicate title",
     "Attempt failed with a technical error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}",
-    "Plan rejected (The engineering and physics behind how articulated buses bend around sharp corners): duplicate title"
+    "Plan rejected (The engineering and physics behind how articulated buses bend around sharp corners): duplicate title",
+    "Attempt failed with a technical error: GEMINI_API_KEY is not set",
+    "Attempt failed with a technical error: GEMINI_API_KEY is not set",
+    "Attempt failed with a technical error: GEMINI_API_KEY is not set"
   ]
 }
