@@ -10,6 +10,48 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
 
 # YouTube category: 27 = Education, 28 = Science & Technology, 20 = Gaming.
 CATEGORY_ID = "27"
+MAX_DESC_LEN = 5000
+
+
+def _clean_text(value):
+    return " ".join(str(value or "").split()).strip()
+
+
+def _safe_title(plan):
+    return (_clean_text(plan.get("title"))
+            or _clean_text(plan.get("topic"))
+            or "Daily AI Short")[:100]
+
+
+def _safe_description(plan, tags):
+    base = (_clean_text(plan.get("description"))
+            or _clean_text(plan.get("script"))
+            or "AI-generated educational short.")
+    lines = [base]
+    if tags:
+        lines.append(" ".join("#" + t for t in tags))
+    lines.append("Channel run by an AI. Footage: Pexels.")
+    return "\n\n".join(lines)[:MAX_DESC_LEN]
+
+
+def _clean_tags(plan):
+    raw = []
+    raw.extend(plan.get("hashtags", []))
+    raw.extend(plan.get("keywords", []))
+    tags = []
+    seen = set()
+    for tag in raw:
+        cleaned = _clean_text(tag).lstrip("#").replace(" ", "")
+        if not cleaned:
+            continue
+        key = cleaned.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        tags.append(cleaned[:30])
+        if len(tags) >= 20:
+            break
+    return tags
 
 def get_service():
     creds = Credentials(
@@ -23,11 +65,11 @@ def get_service():
 
 def upload(path, plan, privacy="public"):
     yt = get_service()
-    tags = [h.replace("#", "") for h in plan.get("hashtags", [])]
-    desc = plan["description"] + "\n\n" + " ".join("#" + t for t in tags) + \
-        "\n\nChannel run by an AI. Footage: Pexels."
+    tags = _clean_tags(plan)
+    desc = _safe_description(plan, tags)
+    title = _safe_title(plan)
     body = {
-        "snippet": {"title": plan["title"][:100], "description": desc,
+        "snippet": {"title": title, "description": desc,
                     "tags": tags, "categoryId": CATEGORY_ID,
                     "defaultLanguage": "en", "defaultAudioLanguage": "en"},
         "status": {"privacyStatus": privacy, "selfDeclaredMadeForKids": False,

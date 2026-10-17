@@ -30,6 +30,9 @@ All changes keep the project free and fully automatic.
   upload failure is recorded as a lesson before re-raising.
 - **Metadata** (`upload.py`): YouTube category set to Education (27), English
   description fixed, audio language declared.
+- **Upload resilience** (`upload.py`): title/description/tags are now cleaned
+  with safe fallbacks (topic/script/default text, deduped tags), reducing
+  avoidable publish failures when model output is incomplete.
 - **Reproducibility**: dependencies pinned in `requirements.txt`; Whisper
   model cache added to CI; stray empty `git` file removed.
 

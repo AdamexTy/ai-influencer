@@ -183,9 +183,20 @@ since the Whisper model has to download.
 - Max 3 planning attempts per run, 45-minute workflow timeout.
 - A 70/30 "exploit vs explore" instruction baked into the prompt, so the
   agent mostly repeats what works but keeps experimenting.
+- Upload metadata is sanitised with safe fallbacks in `upload.py`, so an
+  imperfect LLM response is less likely to break publishing.
 
 None of this guarantees good judgment from the model — review what it
 publishes, especially early on.
+
+## Quick publish-health check
+
+If you change production code and want to confirm publishing still works:
+
+1. Run the workflow manually from the Actions tab.
+2. Open the "Run the agent" logs and confirm it prints:
+   `Published: https://youtube.com/shorts/<video_id>`.
+3. Check YouTube Studio for the new video and verify title/description/tags.
 
 ## Extending beyond YouTube
 
