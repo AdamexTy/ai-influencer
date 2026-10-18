@@ -7,7 +7,7 @@
     "language": "en",
     "audience": "worldwide",
     "started": "2026-09-30",
-    "subscribers": 10,
+    "subscribers": 11,
     "total_views": 11605
   },
   "videos": [
@@ -403,7 +403,7 @@
       "topic": "The chemistry and unique properties of Limonene found in citrus fruits",
       "title": "The Citrus Chemical That Dissolves Styrofoam Instantly!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Limonene' to create an engaging, visually striking, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 480,
+      "views": 519,
       "likes": 5,
       "comments": 0
     },
@@ -425,7 +425,7 @@
       "topic": "Solar power surpassing nuclear energy globally for the first time in history",
       "title": "Solar Just Beat Nuclear Power Globally!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending market data topic 'Solar surpasses nuclear power globally for first time' from pv magazine/Hacker News to create a compelling and timely science short. The script features an immediate hook in the first two seconds, is entirely in English, and fits the 25-45 second length requirement.",
-      "views": 35,
+      "views": 40,
       "likes": 0,
       "comments": 0
     },
@@ -458,6 +458,17 @@
       "topic": "Bleached corals healing rapidly through physical touch with healthy neighbors",
       "title": "Corals Have A Secret Healing Power We Just Discovered!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Bleached corals thrive within days when touching healthy neighbour' to create a captivating, true, and inspiring science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 67,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "1Q93jk6JNgc",
+      "date": "2026-10-18",
+      "niche": "Curiosità e Scienza",
+      "topic": "The Intel 8087 chip and how it revolutionized floating-point calculations",
+      "title": "The Tiny Chip That Changed How Computers Think!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic about the Intel 8087 chip to create a fast-paced, highly engaging science and tech short with an immediate hook, keeping the script within the 25-45 second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
