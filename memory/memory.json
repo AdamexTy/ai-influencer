@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 12,
-    "total_views": 11936
+    "total_views": 12381
   },
   "videos": [
     {
@@ -458,8 +458,8 @@
       "topic": "Bleached corals healing rapidly through physical touch with healthy neighbors",
       "title": "Corals Have A Secret Healing Power We Just Discovered!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Bleached corals thrive within days when touching healthy neighbour' to create a captivating, true, and inspiring science short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 93,
-      "likes": 0,
+      "views": 95,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -491,8 +491,8 @@
       "topic": "The physics behind why giant drone motors can lift massive weight using single-motor stability",
       "title": "The Drone Built With Only ONE Motor!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'I built a drone with only one motor' to create an engaging, highly visual, and educational science short with a powerful hook in the first 2 seconds, keeping the script within the 25-45 second range and fully in English.",
-      "views": 25,
-      "likes": 0,
+      "views": 100,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -502,6 +502,17 @@
       "topic": "Ansel Adams and the secret chemistry behind his legendary wilderness photography",
       "title": "The Darkroom Magic Behind Ansel Adams' Masterpieces!",
       "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche. I used the trending Wikipedia topic 'Ansel Adams' to create an engaging, highly visual, and educational short with an immediate hook in the first two seconds, keeping the script within the 25-45 second range and fully in English.",
+      "views": 0,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "O4--IOWSMh8",
+      "date": "2026-10-19",
+      "niche": "Curiosità e Scienza",
+      "topic": "The fascinating science of deep sea whale falls and how entire ecosystems thrive on a single carcass",
+      "title": "An Entire Ecosystem Lives Inside A Single Dead Whale!",
+      "rationale": "Following the 70% rule, I am sticking with the successful 'Curiosità e Scienza' niche, which has yielded high views and engagement in past videos like the orange cat and Chernobyl secrets. I used the trending Wikipedia topic 'Whalefall (film)' and marine biology to create a fascinating, true, and educational science short with a powerful hook in the first two seconds, keeping the script within the 35-second range and fully in English.",
       "views": 0,
       "likes": 0,
       "comments": 0
