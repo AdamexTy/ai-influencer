@@ -28,6 +28,26 @@ jobs:
           python-version: "3.11"
           cache: pip
 
+      - name: Validate required configuration
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          missing=""
+          for key in GEMINI_API_KEY PEXELS_API_KEY YOUTUBE_API_KEY YT_CLIENT_ID YT_CLIENT_SECRET YT_REFRESH_TOKEN; do
+            if [ -z "${!key:-}" ]; then
+              missing="$missing $key"
+            fi
+          done
+          if [ -n "$missing" ]; then
+            echo "Missing required secrets:$missing"
+            exit 1
+          fi
+
       - name: Install FFmpeg and fonts
         run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu
 
@@ -45,6 +65,12 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
+
+      - name: Run tests (offline)
+        run: python -m pytest -q
+
+      - name: Validate Python syntax imports
+        run: python -m compileall -q src tests
 
       - name: Run the agent
         env:
