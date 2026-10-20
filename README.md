@@ -134,6 +134,26 @@ A few steps genuinely require a person — Google won't let a script do them:
 
 Everything after this runs on its own via the `daily.yml` workflow.
 
+
+## Optional YouTube Analytics enrichment (backward compatible)
+
+`src/feedback.py` always keeps the existing public Data API metric refresh
+(views/likes/comments/channel totals). If OAuth credentials include
+`yt-analytics.readonly`, it also attempts to enrich each video with private
+analytics when available (for example average view duration, average percentage
+viewed, subscribers gained, and impressions/CTR when the report supports them).
+If Analytics is unavailable or missing scope, publishing still continues.
+
+If your current refresh token was created before adding
+`https://www.googleapis.com/auth/yt-analytics.readonly`, regenerate it with:
+
+```bash
+cd src
+python get_token.py
+```
+
+Then update `YT_REFRESH_TOKEN` in GitHub Secrets. This is optional.
+
 ## Project structure
 
 ```
@@ -177,7 +197,7 @@ since the Whisper model has to download.
 
 - Local keyword blocklist (medical/financial/legal advice, politics,
   adult content, etc.) in `guardrails.py` — free, no API call.
-- Script length bounds and duplicate-title checks.
+- Script length bounds, plan-shape checks, duplicate-title/topic checks, and conservative near-duplicate rejection.
 - `containsSyntheticMedia: true` is set on every upload, disclosing
   AI-generated content to YouTube and viewers.
 - Max 3 planning attempts per run, 45-minute workflow timeout.
@@ -208,3 +228,31 @@ If you fork this for your own channel:
   doesn't start out as a clone of whatever channel this was built for.
 - `memory/memory.json` ships empty in this repo (`{"channel": {}, "videos":
   [], "lessons": []}`) — the agent fills it in as it runs.
+
+
+## Local developer checks
+
+From repository root:
+
+```bash
+python -m pytest -q
+python -m compileall -q src tests
+```
+
+The tests are offline and use mocks/fakes only (no live Gemini/YouTube/Pexels/FFmpeg required).
+
+
+## Practical content strategy from recorded memory
+
+The current `memory/memory.json` snapshot is historical cache data committed by
+past runs, not guaranteed live analytics. The strongest observed formats remain:
+
+- concrete engineering systems with visible mechanics,
+- animal intelligence/biology with clear visual behavior,
+- hidden or legacy technology explained with one surprising fact,
+- natural phenomena with a tangible scene or object.
+
+A practical mix is still 70/20/10: mostly proven visual pillars, some adjacent
+experiments, and a small exploration slice. Keep channel rebranding/manual
+identity changes as a human decision in YouTube Studio rather than auto-editing
+identity fields from code.

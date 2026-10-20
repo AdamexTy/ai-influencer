@@ -4,6 +4,33 @@
 
 All changes keep the project free and fully automatic.
 
+- **Memory recovery hardening** (`main.py`): malformed or partially written
+  `memory/memory.json` no longer crashes the run. The file is backed up
+  (`memory.json.corrupt-<timestamp>.bak`), normalized (`channel/videos/lessons`),
+  then safely rewritten atomically.
+- **Stronger plan guardrails** (`guardrails.py`): explicit plan-shape/type checks,
+  title/topic duplicate checks, conservative near-duplicate detection, and clearer
+  rejection reasons for malformed Gemini output.
+- **Planning robustness** (`agent.py`): prompt now includes a structured
+  performance summary and explicit visual-topic guidance while preserving model
+  fallback behavior. JSON parsing now handles code fences/empty responses.
+- **Optional private analytics enrichment** (`feedback.py` + `get_token.py`):
+  Data API metrics remain baseline; Analytics metrics are added only when OAuth
+  scope/credentials allow it, with graceful fallback and per-video metric history
+  timestamps.
+- **Market and production reliability** (`market.py`, `produce.py`): source-level
+  response validation/timeouts/error isolation, run-scoped artifacts, stricter
+  clip coverage checks, safer subtitle path escaping, and final MP4 stream
+  validation.
+- **Upload metadata hardening** (`upload.py`): metadata sanitization, optional
+  category selection by plan context, and clearer retry handling of retryable vs
+  non-retryable upload errors.
+- **Workflow safety checks** (`daily.yml`): preflight required-secret validation,
+  offline tests and compile validation before expensive publish steps, while
+  preserving schedule/concurrency/memory persistence/optional alerts.
+- **Offline test suite added** (`tests/`): pytest coverage for memory recovery,
+  guardrails duplicate checks, analytics fallback, market failure handling, and
+  Gemini response parsing.
 - **Robust LLM fallback** (`agent.py`): a bad/retired model name no longer
   aborts the whole chain. Only a daily-quota error or a temporary overload
   (`503`) is handled specially; any other failure now falls through to the
@@ -77,5 +104,3 @@ tested by one person, on one channel, for a few days. Expect rough edges.
 - The Google OAuth app needs to pass Google's "sensitive scope" verification
   to avoid the 7-day test-mode token expiry; until then, the token must be
   regenerated manually every 7 days.
-- No automated tests. This was built interactively, file by file, and
-  debugged against real runs.
