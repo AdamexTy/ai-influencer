@@ -84,7 +84,7 @@
       "topic": "The Real Kevin Bacon and Six Degrees of Separation network science",
       "title": "You are connected to everyone in 6 steps!",
       "rationale": "Sticking to the successful 'Curiosità e Scienza' niche per the 70% rule, I chose the trending topic 'The Real Kevin Bacon' from Hacker News, connecting it to the universally engaging mathematical concept of six degrees of separation. The hook is immediate, the content is entertaining and educational, and it fits the duration limit.",
-      "views": 48,
+      "views": 49,
       "likes": 0,
       "comments": 0
     },
@@ -95,6 +95,17 @@
       "topic": "Jonathan the 190 year old tortoise living on St. Helena island",
       "title": "The Oldest Living Land Animal Met Queen Victoria!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Wikipedia/Hacker News topic about Jonathan the 190-year-old tortoise to create an engaging, universally appealing, and heartwarming science and history short with a strong hook in the first 2 seconds.",
+      "views": 162,
+      "likes": 15,
+      "comments": 1
+    },
+    {
+      "id": "rufPyoi5QmQ",
+      "date": "2026-10-24",
+      "niche": "Curiosità e Scienza",
+      "topic": "Neural chip decodes interactions between brain regions",
+      "title": "This Microchip Can Read Your Thoughts In Real Time!",
+      "rationale": "Sticking to the successful 'Curiosità e Scienza' niche following the 70% rule, I used the trending Hacker News topic 'Neural chip decodes interactions between brain regions'. The topic is futuristic, highly engaging, features a powerful hook in the first 2 seconds, and fits within the 30-45 second spoken limit.",
       "views": 0,
       "likes": 0,
       "comments": 0
