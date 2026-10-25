@@ -62,7 +62,7 @@
       "topic": "Why investor-owned utilities charge 23% more for electricity than public providers",
       "title": "Why Your Electricity Bill Is Secretly Higher",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using verified trending data from Hacker News ('Investor-owned utilities charge 23% more for electricity than public providers') to provide a fascinating, educational, and universally relevant short video with a strong hook in the first 2 seconds.",
-      "views": 106,
+      "views": 108,
       "likes": 1,
       "comments": 0
     },
@@ -73,7 +73,7 @@
       "topic": "UUIDv7 limitations and computer systems timekeeping",
       "title": "The Hidden Flaw Inside Modern Computer IDs",
       "rationale": "Sticking to the successful 'Curiosità e Scienza' niche (70% rule), I used a trending topic from Hacker News ('UUIDv7 doesn't have the properties you think it does') to create a fascinating, fast-paced technical curiosity with a strong hook.",
-      "views": 88,
+      "views": 92,
       "likes": 1,
       "comments": 0
     },
@@ -84,7 +84,7 @@
       "topic": "The Real Kevin Bacon and Six Degrees of Separation network science",
       "title": "You are connected to everyone in 6 steps!",
       "rationale": "Sticking to the successful 'Curiosità e Scienza' niche per the 70% rule, I chose the trending topic 'The Real Kevin Bacon' from Hacker News, connecting it to the universally engaging mathematical concept of six degrees of separation. The hook is immediate, the content is entertaining and educational, and it fits the duration limit.",
-      "views": 49,
+      "views": 50,
       "likes": 0,
       "comments": 0
     },
@@ -95,8 +95,8 @@
       "topic": "Jonathan the 190 year old tortoise living on St. Helena island",
       "title": "The Oldest Living Land Animal Met Queen Victoria!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Wikipedia/Hacker News topic about Jonathan the 190-year-old tortoise to create an engaging, universally appealing, and heartwarming science and history short with a strong hook in the first 2 seconds.",
-      "views": 162,
-      "likes": 15,
+      "views": 228,
+      "likes": 20,
       "comments": 1
     },
     {
@@ -106,6 +106,17 @@
       "topic": "Neural chip decodes interactions between brain regions",
       "title": "This Microchip Can Read Your Thoughts In Real Time!",
       "rationale": "Sticking to the successful 'Curiosità e Scienza' niche following the 70% rule, I used the trending Hacker News topic 'Neural chip decodes interactions between brain regions'. The topic is futuristic, highly engaging, features a powerful hook in the first 2 seconds, and fits within the 30-45 second spoken limit.",
+      "views": 27,
+      "likes": 1,
+      "comments": 0
+    },
+    {
+      "id": "eKFCOCZOsxc",
+      "date": "2026-10-25",
+      "niche": "Curiosità e Scienza",
+      "topic": "How Japanese dried bonito Katsuobushi is made using fermentation and a specific mold",
+      "title": "The Hardest Food In The World Is Alive!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('How Japanese Dried Bonito Is Made') to create an entertaining, highly visual, and educational short with a strong hook in the first 2 seconds.",
       "views": 0,
       "likes": 0,
       "comments": 0
