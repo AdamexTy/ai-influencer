@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 18,
-    "total_views": 16106
+    "total_views": 17778
   },
   "videos": [
     {
@@ -95,7 +95,7 @@
       "topic": "Jonathan the 190 year old tortoise living on St. Helena island",
       "title": "The Oldest Living Land Animal Met Queen Victoria!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Wikipedia/Hacker News topic about Jonathan the 190-year-old tortoise to create an engaging, universally appealing, and heartwarming science and history short with a strong hook in the first 2 seconds.",
-      "views": 272,
+      "views": 278,
       "likes": 24,
       "comments": 1
     },
@@ -150,6 +150,17 @@
       "topic": "Diamond transistors and how synthetic diamonds will revolutionize high power electronics",
       "title": "Diamonds Are Replacing Silicon Inside Your Future Tech!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Hacker News topic 'Diamond Transistor' to create an engaging, highly visual, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical or financial keywords.",
+      "views": 5,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "2LanvdC-MHk",
+      "date": "2026-10-26",
+      "niche": "Curiosità e Scienza",
+      "topic": "Birdwatching rewires the brain and slows cognitive decline",
+      "title": "Watching Birds Can Literally Rewire Your Brain!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Birdwatching rewires the brain and slows cognitive decline' to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, completely avoiding any medical advice or blocked words.",
       "views": 0,
       "likes": 0,
       "comments": 0
