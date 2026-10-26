@@ -7,7 +7,7 @@
     "language": "en",
     "audience": "worldwide",
     "started": "2026-09-30",
-    "subscribers": 17,
+    "subscribers": 18,
     "total_views": 16106
   },
   "videos": [
@@ -95,7 +95,7 @@
       "topic": "Jonathan the 190 year old tortoise living on St. Helena island",
       "title": "The Oldest Living Land Animal Met Queen Victoria!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Wikipedia/Hacker News topic about Jonathan the 190-year-old tortoise to create an engaging, universally appealing, and heartwarming science and history short with a strong hook in the first 2 seconds.",
-      "views": 245,
+      "views": 272,
       "likes": 24,
       "comments": 1
     },
@@ -106,7 +106,7 @@
       "topic": "Neural chip decodes interactions between brain regions",
       "title": "This Microchip Can Read Your Thoughts In Real Time!",
       "rationale": "Sticking to the successful 'Curiosità e Scienza' niche following the 70% rule, I used the trending Hacker News topic 'Neural chip decodes interactions between brain regions'. The topic is futuristic, highly engaging, features a powerful hook in the first 2 seconds, and fits within the 30-45 second spoken limit.",
-      "views": 32,
+      "views": 33,
       "likes": 1,
       "comments": 0
     },
@@ -117,7 +117,7 @@
       "topic": "How Japanese dried bonito Katsuobushi is made using fermentation and a specific mold",
       "title": "The Hardest Food In The World Is Alive!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('How Japanese Dried Bonito Is Made') to create an entertaining, highly visual, and educational short with a strong hook in the first 2 seconds.",
-      "views": 992,
+      "views": 1005,
       "likes": 13,
       "comments": 0
     },
@@ -128,7 +128,7 @@
       "topic": "The 10-year-old CNN AI model outperforming frontier LLMs for skin cancer diagnosis",
       "title": "A 10-Year-Old AI Beats Modern Models At Medicine!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis') to create an engaging, highly educational short with a strong hook in the first 2 seconds.",
-      "views": 64,
+      "views": 87,
       "likes": 1,
       "comments": 0
     },
@@ -139,6 +139,17 @@
       "topic": "The history and geology of the U.S. Power Grid system infrastructure",
       "title": "The Invisible Web Powering Your Entire Life!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The U.S. Power Grid' to create an engaging, universally appealing science and infrastructure short with a powerful hook in the first 2 seconds, avoiding any blocked medical/diagnostic terms.",
+      "views": 809,
+      "likes": 3,
+      "comments": 0
+    },
+    {
+      "id": "pr_6sNGhfes",
+      "date": "2026-10-26",
+      "niche": "Curiosità e Scienza",
+      "topic": "Diamond transistors and how synthetic diamonds will revolutionize high power electronics",
+      "title": "Diamonds Are Replacing Silicon Inside Your Future Tech!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Hacker News topic 'Diamond Transistor' to create an engaging, highly visual, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical or financial keywords.",
       "views": 0,
       "likes": 0,
       "comments": 0
