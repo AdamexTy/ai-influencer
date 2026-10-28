@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 18,
-    "total_views": 18156
+    "total_views": 18310
   },
   "videos": [
     {
@@ -95,7 +95,7 @@
       "topic": "Jonathan the 190 year old tortoise living on St. Helena island",
       "title": "The Oldest Living Land Animal Met Queen Victoria!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Wikipedia/Hacker News topic about Jonathan the 190-year-old tortoise to create an engaging, universally appealing, and heartwarming science and history short with a strong hook in the first 2 seconds.",
-      "views": 278,
+      "views": 280,
       "likes": 24,
       "comments": 1
     },
@@ -117,7 +117,7 @@
       "topic": "How Japanese dried bonito Katsuobushi is made using fermentation and a specific mold",
       "title": "The Hardest Food In The World Is Alive!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('How Japanese Dried Bonito Is Made') to create an entertaining, highly visual, and educational short with a strong hook in the first 2 seconds.",
-      "views": 1015,
+      "views": 1016,
       "likes": 13,
       "comments": 0
     },
@@ -139,7 +139,7 @@
       "topic": "The history and geology of the U.S. Power Grid system infrastructure",
       "title": "The Invisible Web Powering Your Entire Life!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The U.S. Power Grid' to create an engaging, universally appealing science and infrastructure short with a powerful hook in the first 2 seconds, avoiding any blocked medical/diagnostic terms.",
-      "views": 889,
+      "views": 894,
       "likes": 3,
       "comments": 0
     },
@@ -150,7 +150,7 @@
       "topic": "Diamond transistors and how synthetic diamonds will revolutionize high power electronics",
       "title": "Diamonds Are Replacing Silicon Inside Your Future Tech!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using the trending Hacker News topic 'Diamond Transistor' to create an engaging, highly visual, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical or financial keywords.",
-      "views": 17,
+      "views": 19,
       "likes": 1,
       "comments": 0
     },
@@ -161,8 +161,8 @@
       "topic": "Birdwatching rewires the brain and slows cognitive decline",
       "title": "Watching Birds Can Literally Rewire Your Brain!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Birdwatching rewires the brain and slows cognitive decline' to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, completely avoiding any medical advice or blocked words.",
-      "views": 82,
-      "likes": 3,
+      "views": 87,
+      "likes": 4,
       "comments": 0
     },
     {
@@ -172,7 +172,7 @@
       "topic": "Just imagining a physical workout activates your muscles and increases strength",
       "title": "Just Thinking About Working Out Makes You Stronger!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('Just Imagining a Workout Can Make You Stronger') to create a fascinating, scientifically backed short video with a strong hook in the first 2 seconds, avoiding any blocked medical/diagnosis keywords while remaining engaging and educational.",
-      "views": 35,
+      "views": 48,
       "likes": 1,
       "comments": 0
     },
@@ -183,7 +183,7 @@
       "topic": "The chemistry and history behind the new Apple M6 processor and semiconductor manufacturing",
       "title": "Your Next Computer Chip Is Smaller Than A Virus!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic about the new iMac and MacBook Pro with M6 to create a safe, engaging, and educational science short about microprocessors without violating any medical or forbidden topic filters.",
-      "views": 24,
+      "views": 31,
       "likes": 1,
       "comments": 0
     },
@@ -194,7 +194,7 @@
       "topic": "An examination of lost firefly species of the US and Canada",
       "title": "Why Are Fireflies Vanishing From Our Backyards?",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending Wikipedia topic ('An examination of lost firefly species of the US and Canada') to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical keywords.",
-      "views": 12,
+      "views": 25,
       "likes": 0,
       "comments": 0
     },
@@ -205,6 +205,17 @@
       "topic": "Radio-tagged Monarch butterflies migration physics and tracking",
       "title": "How Tiny Butterflies Fly Thousands of Miles!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Radio-tagged Monarch butterflies' to create a visually appealing, universally fascinating, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical or blocked terms.",
+      "views": 69,
+      "likes": 2,
+      "comments": 0
+    },
+    {
+      "id": "5u1CjqK2ksk",
+      "date": "2026-10-28",
+      "niche": "Curiosità e Scienza",
+      "topic": "The history and physics of Emacs and text editors turning 50",
+      "title": "The Oldest Software You Still Use Every Day!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Emacs Turns 50' to create an engaging, universally appealing tech curiosity short with a strong hook in the first 2 seconds, entirely avoiding medical or restricted terms.",
       "views": 0,
       "likes": 0,
       "comments": 0
