@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 18,
-    "total_views": 18310
+    "total_views": 18450
   },
   "videos": [
     {
@@ -139,7 +139,7 @@
       "topic": "The history and geology of the U.S. Power Grid system infrastructure",
       "title": "The Invisible Web Powering Your Entire Life!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'The U.S. Power Grid' to create an engaging, universally appealing science and infrastructure short with a powerful hook in the first 2 seconds, avoiding any blocked medical/diagnostic terms.",
-      "views": 894,
+      "views": 895,
       "likes": 3,
       "comments": 0
     },
@@ -161,7 +161,7 @@
       "topic": "Birdwatching rewires the brain and slows cognitive decline",
       "title": "Watching Birds Can Literally Rewire Your Brain!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Birdwatching rewires the brain and slows cognitive decline' to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, completely avoiding any medical advice or blocked words.",
-      "views": 87,
+      "views": 89,
       "likes": 4,
       "comments": 0
     },
@@ -172,7 +172,7 @@
       "topic": "Just imagining a physical workout activates your muscles and increases strength",
       "title": "Just Thinking About Working Out Makes You Stronger!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('Just Imagining a Workout Can Make You Stronger') to create a fascinating, scientifically backed short video with a strong hook in the first 2 seconds, avoiding any blocked medical/diagnosis keywords while remaining engaging and educational.",
-      "views": 48,
+      "views": 50,
       "likes": 1,
       "comments": 0
     },
@@ -183,7 +183,7 @@
       "topic": "The chemistry and history behind the new Apple M6 processor and semiconductor manufacturing",
       "title": "Your Next Computer Chip Is Smaller Than A Virus!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic about the new iMac and MacBook Pro with M6 to create a safe, engaging, and educational science short about microprocessors without violating any medical or forbidden topic filters.",
-      "views": 31,
+      "views": 36,
       "likes": 1,
       "comments": 0
     },
@@ -194,8 +194,8 @@
       "topic": "An examination of lost firefly species of the US and Canada",
       "title": "Why Are Fireflies Vanishing From Our Backyards?",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending Wikipedia topic ('An examination of lost firefly species of the US and Canada') to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical keywords.",
-      "views": 25,
-      "likes": 0,
+      "views": 26,
+      "likes": 1,
       "comments": 0
     },
     {
@@ -216,6 +216,17 @@
       "topic": "The history and physics of Emacs and text editors turning 50",
       "title": "The Oldest Software You Still Use Every Day!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Emacs Turns 50' to create an engaging, universally appealing tech curiosity short with a strong hook in the first 2 seconds, entirely avoiding medical or restricted terms.",
+      "views": 15,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "q2Vnt9lYpEI",
+      "date": "2026-10-28",
+      "niche": "Curiosità e Scienza",
+      "topic": "Spiders spin silk dope into nature's toughest material",
+      "title": "Spiders Make The Toughest Material On Earth!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('Spiders Spin 'Silk Dope' into Nature's Toughest Material') to create an entertaining and educational short with a strong hook in the first 2 seconds, completely avoiding any medical or restricted keywords.",
       "views": 0,
       "likes": 0,
       "comments": 0
