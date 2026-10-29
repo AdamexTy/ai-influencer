@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 18,
-    "total_views": 18493
+    "total_views": 19002
   },
   "videos": [
     {
@@ -249,6 +249,17 @@
       "topic": "H.264 video compression magic and how macroblocks work",
       "title": "How Your Phone Shrinks Videos Instantly!",
       "rationale": "Following the 70% rule, I am sticking to the highly successful 'Curiosità e Scienza' niche, while ensuring complete compliance with content policies (avoiding any restricted words or medical references). Using the trending Hacker News topic 'H.264 Is Magic', I crafted an educational and fascinating explanation of video compression with a powerful hook in the first 2 seconds.",
+      "views": 15,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "WzTM03erNEQ",
+      "date": "2026-10-29",
+      "niche": "Curiosità e Scienza",
+      "topic": "A tiny world model running games on a Raspberry Pi Pico 2 W",
+      "title": "Playing 3D Video Games Inside A Tiny Microchip!",
+      "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('A tiny world model running games on a Raspberry Pi Pico 2 W') to create a fascinating, tech-focused, and entertaining short with a strong hook in the first 2 seconds, completely avoiding any medical or restricted topics.",
       "views": 0,
       "likes": 0,
       "comments": 0
