@@ -8,7 +8,7 @@
     "audience": "worldwide",
     "started": "2026-09-30",
     "subscribers": 18,
-    "total_views": 18450
+    "total_views": 18493
   },
   "videos": [
     {
@@ -62,7 +62,7 @@
       "topic": "Why investor-owned utilities charge 23% more for electricity than public providers",
       "title": "Why Your Electricity Bill Is Secretly Higher",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I am using verified trending data from Hacker News ('Investor-owned utilities charge 23% more for electricity than public providers') to provide a fascinating, educational, and universally relevant short video with a strong hook in the first 2 seconds.",
-      "views": 108,
+      "views": 109,
       "likes": 1,
       "comments": 0
     },
@@ -205,7 +205,7 @@
       "topic": "Radio-tagged Monarch butterflies migration physics and tracking",
       "title": "How Tiny Butterflies Fly Thousands of Miles!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Radio-tagged Monarch butterflies' to create a visually appealing, universally fascinating, and educational short with a strong hook in the first 2 seconds, avoiding any restricted medical or blocked terms.",
-      "views": 69,
+      "views": 73,
       "likes": 2,
       "comments": 0
     },
@@ -216,7 +216,7 @@
       "topic": "The history and physics of Emacs and text editors turning 50",
       "title": "The Oldest Software You Still Use Every Day!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Emacs Turns 50' to create an engaging, universally appealing tech curiosity short with a strong hook in the first 2 seconds, entirely avoiding medical or restricted terms.",
-      "views": 36,
+      "views": 45,
       "likes": 0,
       "comments": 0
     },
@@ -227,7 +227,7 @@
       "topic": "Spiders spin silk dope into nature's toughest material",
       "title": "Spiders Make The Toughest Material On Earth!",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used a trending topic from Hacker News ('Spiders Spin 'Silk Dope' into Nature's Toughest Material') to create an entertaining and educational short with a strong hook in the first 2 seconds, completely avoiding any medical or restricted keywords.",
-      "views": 152,
+      "views": 204,
       "likes": 1,
       "comments": 0
     },
@@ -238,6 +238,17 @@
       "topic": "Why birds can fly over Mount Everest and survive thin air",
       "title": "Why Birds Can Fly Higher Than Airplanes?",
       "rationale": "Following the 70% rule, I am sticking to the successful 'Curiosità e Scienza' niche. I used the trending Hacker News topic 'Why Birds Can Fly over Mount Everest' to create an engaging, universally appealing, and educational short with a strong hook in the first 2 seconds, avoiding any blocked medical/diagnostic words.",
+      "views": 262,
+      "likes": 0,
+      "comments": 0
+    },
+    {
+      "id": "0RA-WpySz9A",
+      "date": "2026-10-29",
+      "niche": "Curiosità e Scienza",
+      "topic": "H.264 video compression magic and how macroblocks work",
+      "title": "How Your Phone Shrinks Videos Instantly!",
+      "rationale": "Following the 70% rule, I am sticking to the highly successful 'Curiosità e Scienza' niche, while ensuring complete compliance with content policies (avoiding any restricted words or medical references). Using the trending Hacker News topic 'H.264 Is Magic', I crafted an educational and fascinating explanation of video compression with a powerful hook in the first 2 seconds.",
       "views": 0,
       "likes": 0,
       "comments": 0
